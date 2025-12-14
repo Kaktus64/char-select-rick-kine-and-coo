@@ -1,0 +1,269 @@
+local E_MODEL_RICK_TH = smlua_model_util_get_id("rick_th_geo")
+
+local E_MODEL_RICK_TH_ROCK = smlua_model_util_get_id("rick_th_rock_geo")
+
+local E_MODEL_COO_TO = smlua_model_util_get_id("coo_to_geo")
+
+function is_rick_th()
+    return CT_RICK_TH == charSelect.character_get_current_number()
+end
+
+---@diagnostic disable: undefined-global
+if not _G.charSelectExists then return end
+
+local gStateExtras = {}
+for i = 0, MAX_PLAYERS - 1 do
+    gStateExtras[i] = {}
+    local m = gMarioStates[i]
+    local e = gStateExtras[i]
+    e.rotAngle = 0
+    e.charArg = 0
+    e.cooFlyCountCount = 0
+end
+
+local function limit_angle(a)
+    return (a + 0x8000) % 0x10000 - 0x8000
+end
+
+local cooFlyActions = {
+    [ACT_JUMP] = true,
+    [ACT_DOUBLE_JUMP] = true,
+    [ACT_TRIPLE_JUMP] = true,
+    [ACT_FREEFALL] = true,
+    [ACT_LONG_JUMP] = true,
+    [ACT_SIDE_FLIP] = true,
+    [ACT_BACKFLIP] = true,
+    [ACT_WALL_KICK_AIR] = true,
+    [ACT_TOP_OF_POLE_JUMP] = true,
+    [ACT_JUMP_KICK] = true,
+}
+
+local returnToRickActions = {
+    [ACT_IDLE] = true,
+    [ACT_WALKING] = true,
+    [ACT_FREEFALL_LAND] = true,
+    [ACT_WATER_ACTION_END] = true,
+    [ACT_BACKWARD_AIR_KB] = true,
+    [ACT_METAL_WATER_FALLING] = true,
+    [ACT_DIVE] = true,
+    [ACT_GROUND_POUND] = true,
+    [ACT_GRAB_POLE_SLOW] = true,
+    [ACT_GRAB_POLE_FAST] = true,
+    [ACT_LEDGE_GRAB] = true,
+    [ACT_FORWARD_ROLLOUT] = true,
+}
+
+
+local rickSlipperySurfaces = {
+    [SURFACE_CLASS_SLIPPERY] = true,
+    [SURFACE_SLIPPERY] = true,
+    [SURFACE_ICE] = true,
+    [SURFACE_VERY_SLIPPERY] = true,
+    [SURFACE_HARD_SLIPPERY] = true,
+    [SURFACE_NOISE_SLIPPERY] = true,
+    [SURFACE_NO_CAM_COL_SLIPPERY] = true,
+    [SURFACE_HARD_VERY_SLIPPERY] = true,
+    [SURFACE_CLASS_VERY_SLIPPERY] = true,
+    [SURFACE_NO_CAM_COL_VERY_SLIPPERY] = true,
+    [SURFACE_NOISE_VERY_SLIPPERY_73] = true,
+    [SURFACE_NOISE_VERY_SLIPPERY_74] = true,
+}
+
+ACT_RICK_ROLL_AIR = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING)
+ACT_RICK_ROLL = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_ATTACKING | ACT_FLAG_MOVING)
+ACT_COO_FLY = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_MOVING)
+
+function act_rick_roll(m)
+    local e = gStateExtras[m.playerIndex]
+    local stepResult = perform_ground_step(m)
+    m.faceAngle.y = m.intendedYaw - approach_s32(limit_angle(m.intendedYaw - m.faceAngle.y), 0, 0x250, 0x250)
+    smlua_anim_util_set_animation(m.marioObj, "rick_th_roll_quick")
+    apply_slope_accel(m)
+    m.forwardVel = m.forwardVel - 0.1
+    if stepResult == GROUND_STEP_LEFT_GROUND then
+        set_mario_action(m, ACT_RICK_ROLL_AIR, 0)
+    end
+    if stepResult == GROUND_STEP_HIT_WALL then
+        set_mario_action(m, ACT_BACKWARD_AIR_KB, 0)
+        set_mario_particle_flags(m, PARTICLE_VERTICAL_STAR, 0)
+        play_sound(SOUND_ACTION_HIT, m.marioObj.header.gfx.cameraToObject)
+    end
+    --if m.actionTimer > 11 then
+        --set_mario_action(m, ACT_WALKING, 0)
+    --end
+    if m.forwardVel > 110
+    then m.forwardVel = 110
+    end
+    if m.forwardVel < 15 then
+        set_mario_action(m, ACT_DIVE_SLIDE, 0)
+    end
+    if m.input & INPUT_A_PRESSED ~= 0 then
+        set_mario_action(m, ACT_FORWARD_ROLLOUT, 0)
+        set_mario_particle_flags(m, PARTICLE_MIST_CIRCLE, 0)
+        set_anim_to_frame(m, 0)
+    end
+    if m.input & INPUT_B_PRESSED ~= 0 and m.actionTimer > 2 then
+        set_mario_action(m, ACT_DIVE, 0)
+        set_mario_particle_flags(m, PARTICLE_MIST_CIRCLE, 0)
+        m.vel.y = 25
+    end
+    if m.actionTimer % 5 == 0 then
+        play_sound(SOUND_ENV_METAL_BOX_PUSH, m.marioObj.header.gfx.cameraToObject)
+    end
+    apply_slope_accel(m)
+    apply_slope_decel(m, 0.08)
+    m.actionTimer = m.actionTimer + 1
+end
+hook_mario_action(ACT_RICK_ROLL, act_rick_roll)
+
+function act_rick_roll_air(m)
+    local e = gStateExtras[m.playerIndex]
+    local stepResult = common_air_action_step(m, ACT_RICK_ROLL, CHAR_ANIM_RUNNING_UNUSED, AIR_STEP_NONE)
+    m.faceAngle.y = m.intendedYaw - approach_s32(limit_angle(m.intendedYaw - m.faceAngle.y), 0, 0x150, 0x150)
+    m.forwardVel = m.forwardVel + 0.5
+    m.peakHeight = m.pos.y
+    smlua_anim_util_set_animation(m.marioObj, "rick_th_roll_quick")
+    if m.actionTimer < 1 then
+        m.vel.y = 20
+        m.forwardVel = 50
+    end
+    m.actionTimer = m.actionTimer + 1
+end
+hook_mario_action(ACT_RICK_ROLL_AIR, act_rick_roll_air)
+
+function act_coo_fly(m)
+ local e = gStateExtras[m.playerIndex]
+    local stepResult = common_air_action_step(m, ACT_FREEFALL_LAND, CHAR_ANIM_RUNNING_UNUSED, AIR_STEP_CHECK_LEDGE_GRAB)
+    m.faceAngle.y = m.intendedYaw - approach_s32(limit_angle(m.intendedYaw - m.faceAngle.y), 0, 0x300, 0x300)
+    smlua_anim_util_set_animation(m.marioObj, "coo_fly")
+    m.peakHeight = m.pos.y -- no fall sound
+    if m.vel.y < -30 then
+        m.vel.y = -30
+    end
+    m.vel.y = m.vel.y + 3
+    if m.forwardVel > 30 then
+        m.forwardVel = m.forwardVel - 2
+    end
+        if m.controller.buttonPressed & A_BUTTON ~= 0 and e.cooFlyCount ~= 5 then
+            set_anim_to_frame(m, 0)
+            e.cooFlyCount = e.cooFlyCount + 1
+            play_sound(SOUND_ACTION_SPIN, m.marioObj.header.gfx.cameraToObject)
+            m.vel.y = 14
+            set_mario_particle_flags(m, PARTICLE_MIST_CIRCLE, 0)
+            set_mario_action(m, ACT_COO_FLY, 0)
+        end
+        if m.controller.buttonPressed & A_BUTTON ~= 0 and e.cooFlyCount == 5 then
+            set_anim_to_frame(m, 0)
+            m.vel.y = m.vel.y + 2
+            if m.forwardVel > 15 then
+            m.forwardVel = m.forwardVel - 5
+            end
+        end
+        if e.cooFlyCountCount ~= 5 then 
+            m.marioBodyState.eyeState = MARIO_EYES_LOOK_UP
+        else
+            m.marioBodyState.eyeState = MARIO_EYES_CLOSED
+        end
+    if stepResult == AIR_STEP_LANDED then
+        return set_mario_action(m, ACT_FREEFALL_LAND, 0)
+    end
+    if stepResult == AIR_STEP_HIT_WALL then
+        mario_bonk_reflection(m, 0)
+        return set_mario_action(m, ACT_COO_FLY, 0)
+    end
+    if m.input & INPUT_Z_PRESSED ~= 0 then
+        return set_mario_action(m, ACT_GROUND_POUND, 0)
+    end
+    if m.input & INPUT_B_PRESSED ~= 0 then
+        return set_mario_action(m, ACT_DIVE, 0)
+    end
+end
+hook_mario_action(ACT_COO_FLY, act_coo_fly)
+
+function rick_th_update(m)
+    local e = gStateExtras[m.playerIndex]
+    if cooFlyActions[m.action] and m.vel.y < 0 and m.input & INPUT_A_PRESSED ~= 0 and e.cooyFlyCount ~= 5 then
+        play_sound(SOUND_ACTION_SPIN, m.marioObj.header.gfx.cameraToObject)
+        set_mario_action(m, ACT_COO_FLY, 0)
+        set_mario_particle_flags(m, PARTICLE_MIST_CIRCLE, 0)
+        m.vel.y = 15
+    end
+    if cooFlyActions[m.action] and m.vel.y < 0 and m.input & INPUT_A_PRESSED ~= 0 and e.cooFlyCount == 5 then
+        play_sound(SOUND_ACTION_SPIN, m.marioObj.header.gfx.cameraToObject)
+        set_mario_action(m, ACT_COO_FLY, 0)
+        set_mario_particle_flags(m, PARTICLE_MIST_CIRCLE, 0)
+        m.vel.y = 0
+    end
+
+    if m.pos.y == m.floorHeight then
+        e.cooFlyCount = 0
+    end
+    -- no ice slipping because hampter
+        if is_rick_th() and rickSlipperySurfaces[m.floor.type] == true then
+        m.floor.type = SURFACE_CLASS_DEFAULT
+    end
+    if m.action == ACT_COO_FLY then
+        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+    "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
+    "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_COO_TO, CT_MARIO, RICK_TH_ICON, 1)
+    end
+    --rick rock transformation
+    if m.action == ACT_RICK_ROLL then
+        m.marioObj.header.gfx.scale.y = 1.2
+        m.marioObj.header.gfx.scale.x = 1.2
+        m.marioObj.header.gfx.scale.z = 1.2
+        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+    "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
+    "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_RICK_TH_ROCK, CT_MARIO, RICK_TH_ICON, 1)
+    end
+    if m.action == ACT_RICK_ROLL_AIR then
+        m.marioObj.header.gfx.scale.y = 1.2
+        m.marioObj.header.gfx.scale.x = 1.2
+        m.marioObj.header.gfx.scale.z = 1.2
+        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+    "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
+    "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_RICK_TH_ROCK, CT_MARIO, RICK_TH_ICON, 1)
+    end
+    if m.prevAction == ACT_RICK_ROLL and m.action ~= ACT_RICK_ROLL and m.action ~= ACT_RICK_ROLL_AIR then
+                charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+    "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
+    "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_RICK_TH, CT_MARIO, RICK_TH_ICON, 1)
+    end
+    if m.prevAction == ACT_RICK_ROLL_AIR and m.action ~= ACT_RICK_ROLL_AIR and m.action ~= ACT_RICK_ROLL then
+        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+    "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
+    "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_RICK_TH, CT_MARIO, RICK_TH_ICON, 1)
+    end
+    if returnToRickActions[m.action] == true then
+        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+    "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
+    "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_RICK_TH, CT_MARIO, RICK_TH_ICON, 1)
+    end
+    if _G.charSelect.is_menu_open() == true and m.pos.y == m.floorHeight and m.action ~= ACT_RICK_ROLL then
+        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+    "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
+    "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_RICK_TH, CT_MARIO, RICK_TH_ICON, 1)
+    end
+end
+
+function rick_th_set_action(m)
+    local e = gStateExtras[m.playerIndex]
+    if m.action == ACT_RICK_ROLL and m.prevAction == ACT_RICK_ROLL_AIR then
+        play_sound(SOUND_ACTION_TERRAIN_HEAVY_LANDING, m.marioObj.header.gfx.cameraToObject)
+            set_mario_particle_flags(m, PARTICLE_MIST_CIRCLE, 0)
+    end
+end
+
+function rick_th_before_set_action(m, inc)
+    local e = gStateExtras[m.playerIndex]
+    local np = gNetworkPlayers[m.playerIndex]
+    if inc == ACT_SLIDE_KICK then
+        set_mario_particle_flags(m, PARTICLE_MIST_CIRCLE, 0)
+        m.forwardVel = 50
+        return ACT_RICK_ROLL
+    end
+end
+
+_G.charSelect.character_hook_moveset(CT_RICK_TH, HOOK_MARIO_UPDATE, rick_th_update)
+_G.charSelect.character_hook_moveset(CT_RICK_TH, HOOK_ON_SET_MARIO_ACTION, rick_th_set_action)
+_G.charSelect.character_hook_moveset(CT_RICK_TH, HOOK_BEFORE_SET_MARIO_ACTION, rick_th_before_set_action)
