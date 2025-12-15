@@ -6,6 +6,8 @@ local E_MODEL_COO_TO = smlua_model_util_get_id("coo_to_geo")
 
 local E_MODEL_KINE_TF = smlua_model_util_get_id("kine_tf_geo")
 
+local E_MODEL_KINE_TF_ROCK = smlua_model_util_get_id("kine_tf_rock_geo")
+
 function is_rick_th()
     return CT_RICK_TH == charSelect.character_get_current_number()
 end
@@ -48,8 +50,6 @@ local returnToRickActions = {
     [ACT_WATER_ACTION_END] = true,
     [ACT_BACKWARD_AIR_KB] = true,
     [ACT_METAL_WATER_FALLING] = true,
-    [ACT_DIVE] = true,
-    [ACT_GROUND_POUND] = true,
     [ACT_GRAB_POLE_SLOW] = true,
     [ACT_GRAB_POLE_FAST] = true,
     [ACT_LEDGE_GRAB] = true,
@@ -58,6 +58,9 @@ local returnToRickActions = {
     [ACT_JUMP] = true,
     [ACT_STEEP_JUMP] = true,
     [ACT_JUMP_LAND] = true,
+    [ACT_DIVE_SLIDE] = true,
+    [ACT_BUTT_SLIDE] = true,
+    [ACT_BUTT_SLIDE_STOP] = true,
 }
 local returnToKineActions = {
     [ACT_SWIMMING_END] = true,
@@ -165,13 +168,6 @@ function act_coo_fly(m)
             set_mario_particle_flags(m, PARTICLE_MIST_CIRCLE, 0)
             set_mario_action(m, ACT_COO_FLY, 0)
         end
-        if m.controller.buttonPressed & A_BUTTON ~= 0 and e.cooFlyCount == 3 then
-            set_anim_to_frame(m, 0)
-            m.vel.y = m.vel.y + 2
-            if m.forwardVel > 15 then
-            m.forwardVel = m.forwardVel - 5
-            end
-        end
     if stepResult == AIR_STEP_LANDED then
         return set_mario_action(m, ACT_FREEFALL_LAND, 0)
     end
@@ -226,6 +222,23 @@ function rick_th_update(m)
     if m.action == ACT_WALKING then
         m.marioBodyState.torsoAngle.x = 0
         m.marioBodyState.torsoAngle.z = 0
+    end
+    if m.action == ACT_GROUND_POUND and (m.input & INPUT_B_PRESSED) ~= 0 and m.playerIndex == 0 then
+        set_mario_action(m, ACT_DIVE, 0)
+        m.vel.y = 30
+        m.forwardVel = 39
+        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+        "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
+        "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_KINE_TF_ROCK, CT_MARIO, RICK_TH_ICON, 1)
+    end
+    if m.action == ACT_GROUND_POUND and m.playerIndex == 0 then 
+        smlua_anim_util_set_animation(m.marioObj, "kine_pound")
+        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+        "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
+        "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_KINE_TF_ROCK, CT_MARIO, RICK_TH_ICON, 1)
+    end
+    if m.action == ACT_GROUND_POUND_LAND and m.playerIndex == 0 then 
+        smlua_anim_util_set_animation(m.marioObj, "kine_pound_land")
     end
     if cooFlyActions[m.action] and m.vel.y < 0 and m.input & INPUT_A_PRESSED ~= 0 and e.cooyFlyCount ~= 5 then
         play_sound(SOUND_ACTION_SPIN, m.marioObj.header.gfx.cameraToObject)

@@ -17,6 +17,8 @@ local E_MODEL_COO_TO = smlua_model_util_get_id("coo_to_geo")
 
 local E_MODEL_KINE_TF = smlua_model_util_get_id("kine_tf_geo")
 
+local E_MODEL_KINE_TF_ROCK = smlua_model_util_get_id("kine_tf_rock_geo")
+
 local RICK_TH_ICON = get_texture_info("rick_th_icon")
 
 local TEX_RICK_TH_GRAFFITI = get_texture_info("RICK_TH_GRAFFITI")
@@ -141,6 +143,66 @@ local PALETTE_COO_DL2 = {
 	[EMBLEM] = "e5200f"
 }
 
+local PALETTE_KINE_TF = {
+
+    [PANTS]  = "FFFFFF",
+    [SHIRT]  = "FF9731",
+    [GLOVES] = "FF9731",
+    [SHOES]  = "FFD953",
+    [HAIR]   = "000000", 
+    [SKIN]   = "5E7CFF", 
+    [CAP]    = "805FAA", 
+	[EMBLEM] = "ff6993"  
+}
+
+local PALETTE_KINE_AIR_RIDERS = {
+
+    [PANTS]  = "ebe2c4",
+    [SHIRT]  = "a17c66",
+    [GLOVES] = "DB9C70",
+    [SHOES]  = "d46d50",
+    [HAIR]   = "743F39",
+    [SKIN]   = "ebe2c4",
+    [CAP]    = "ac937d",
+	[EMBLEM] = "ff6993"
+}
+
+local PALETTE_PICK_KINE = {
+
+    [PANTS]  = "FFFFFF",
+    [SHIRT]  = "f09088",
+    [GLOVES] = "DB9C70",
+    [SHOES]  = "d11daa",
+    [HAIR]   = "2b1927",
+    [SKIN]   = "ffedfb",
+    [CAP]    = "ffb8ef",
+	[EMBLEM] = "ff6993"
+}
+
+local PALETTE_KIRBY_KTF = {
+
+    [PANTS]  = "fc96be",
+    [SHIRT]  = "fc96be",
+    [GLOVES] = "DB9C70",
+    [SHOES]  = "e5200f",
+    [HAIR]   = "fc96be",
+    [SKIN]   = "fc96be",
+    [CAP]    = "fc96be",
+	[EMBLEM] = "e5200f"
+}
+
+local PALETTE_KINE_DL2 = {
+
+    [PANTS]  = "ffffff",
+    [SHIRT]  = "f8c088",
+    [GLOVES] = "DB9C70",
+    [SHOES]  = "ffe500",
+    [HAIR]   = "000000",
+    [SKIN]   = "ffffff",
+    [CAP]    = "a9b1c1",
+	[EMBLEM] = "e5200f"
+}
+
 local ANIMTABLE_RICK_TH = {
     [_G.charSelect.CS_ANIM_MENU] = "rick_th_menu_anim",
     [CHAR_ANIM_IDLE_HEAD_CENTER] = "rick_th_idle",
@@ -165,6 +227,7 @@ local function on_character_select_load()
     _G.charSelect.character_add_voice(E_MODEL_RICK_TH_ROCK, VOICETABLE_RICK_TH)
     _G.charSelect.character_add_voice(E_MODEL_COO_TO, VOICETABLE_RICK_TH)
     _G.charSelect.character_add_voice(E_MODEL_KINE_TF, VOICETABLE_RICK_TH)
+    _G.charSelect.character_add_voice(E_MODEL_KINE_TF_ROCK, VOICETABLE_RICK_TH)
     _G.charSelect.character_add_graffiti(CT_RICK_TH, TEX_RICK_TH_GRAFFITI)
 
     -- PALETTES
@@ -186,6 +249,18 @@ local function on_character_select_load()
     _G.charSelect.character_add_palette_preset(E_MODEL_COO_TO, PALETTE_PICK_COO, "Significant Other")
     _G.charSelect.character_add_palette_preset(E_MODEL_COO_TO, PALETTE_KIRBY_CTH, "Mouthful")
     _G.charSelect.character_add_palette_preset(E_MODEL_COO_TO, PALETTE_COO_DL2, "Dream")
+
+    _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF, PALETTE_KINE_TF, "Rick, Kine & Coo")
+    _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF, PALETTE_KINE_AIR_RIDERS, "Air Rider")
+    _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF, PALETTE_PICK_KINE, "Significant Other")
+    _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF, PALETTE_KIRBY_KTF, "Mouthful")
+    _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF, PALETTE_KINE_DL2, "Dream")
+
+    _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF_ROCK, PALETTE_KINE_TF, "Rick, Kine & Coo")
+    _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF_ROCK, PALETTE_KINE_AIR_RIDERS, "Air Rider")
+    _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF_ROCK, PALETTE_PICK_KINE, "Significant Other")
+    _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF_ROCK, PALETTE_KIRBY_KTF, "Mouthful")
+    _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF_ROCK, PALETTE_KINE_DL2, "Dream")
 
 
     CSloaded = true

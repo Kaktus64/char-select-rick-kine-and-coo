@@ -1,80 +1,80 @@
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt1[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt1[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyesHalf_1),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_rock_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyesHalf_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt2[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt2[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyesClosed_2),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_rock_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyesClosed_2),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt3[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt3[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyes_3),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_rock_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyes_3),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt4[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt4[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyes_3),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_rock_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyes_3),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt5[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt5[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyes_3),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_rock_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyes_3),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt6[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt6[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyes_3),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_rock_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyes_3),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt7[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt7[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyesDead_4),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_rock_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyesDead_4),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_Capless_Head[] = {
+const GeoLayout kine_tf_rock_Capless_Head[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_SWITCH_CASE(0, geo_switch_mario_eyes),
 		GEO_OPEN_NODE(),
 			GEO_NODE_START(),
 			GEO_OPEN_NODE(),
-				GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1),
+				GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_rock_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1),
 			GEO_CLOSE_NODE(),
-			GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt1),
-			GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt2),
-			GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt3),
-			GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt4),
-			GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt5),
-			GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt6),
-			GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt7),
+			GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt1),
+			GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt2),
+			GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt3),
+			GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt4),
+			GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt5),
+			GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt6),
+			GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt7),
 		GEO_CLOSE_NODE(),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_Left_Hand_Open[] = {
+const GeoLayout kine_tf_rock_Left_Hand_Open[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 60, 0, 0, NULL),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_Right_Hand_Open[] = {
+const GeoLayout kine_tf_rock_Right_Hand_Open[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 60, 0, 0, NULL),
@@ -84,21 +84,21 @@ const GeoLayout kine_tf_Right_Hand_Open[] = {
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_Right_Hand_Peace[] = {
+const GeoLayout kine_tf_rock_Right_Hand_Peace[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 60, 0, 0, NULL),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_Right_Hand_Cap[] = {
+const GeoLayout kine_tf_rock_Right_Hand_Cap[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 60, 0, 0, NULL),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_Right_Hand_Wing_Cap[] = {
+const GeoLayout kine_tf_rock_Right_Hand_Wing_Cap[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 60, 0, 0, NULL),
@@ -107,83 +107,83 @@ const GeoLayout kine_tf_Right_Hand_Wing_Cap[] = {
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt1[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt1[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyesHalf_1),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyesHalf_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt2[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt2[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyesClosed_2),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyesClosed_2),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt3[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt3[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyes_3),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyes_3),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt4[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt4[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyes_3),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyes_3),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt5[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt5[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyes_3),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyes_3),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt6[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt6[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyes_3),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyes_3),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt7[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt7[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyesDead_4),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_KineEyesDead_4),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_Capless_Head[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_rock_Capless_Head[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_SWITCH_CASE(0, geo_switch_mario_eyes),
 		GEO_OPEN_NODE(),
 			GEO_NODE_START(),
 			GEO_OPEN_NODE(),
-				GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1),
+				GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1),
 			GEO_CLOSE_NODE(),
-			GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt1),
-			GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt2),
-			GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt3),
-			GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt4),
-			GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt5),
-			GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt6),
-			GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt7),
+			GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt1),
+			GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt2),
+			GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt3),
+			GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt4),
+			GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt5),
+			GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt6),
+			GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt1_Capless_Head_Eye_State_Switch_opt7),
 		GEO_CLOSE_NODE(),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_Left_Hand_Open[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_rock_Left_Hand_Open[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 60, 0, 0, NULL),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_Right_Hand_Open[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_rock_Right_Hand_Open[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 60, 0, 0, NULL),
@@ -193,21 +193,21 @@ const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_Rig
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_Right_Hand_Peace[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_rock_Right_Hand_Peace[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 60, 0, 0, NULL),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_Right_Hand_Cap[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_rock_Right_Hand_Cap[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 60, 0, 0, NULL),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_Right_Hand_Wing_Cap[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_rock_Right_Hand_Wing_Cap[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 60, 0, 0, NULL),
@@ -216,56 +216,56 @@ const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_Rig
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt1[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt1[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_Head_DL_mesh_layer_1_mat_override_KineEyesHalf_1),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_Head_DL_mesh_layer_1_mat_override_KineEyesHalf_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt2[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt2[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_Head_DL_mesh_layer_1_mat_override_KineEyesClosed_2),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_Head_DL_mesh_layer_1_mat_override_KineEyesClosed_2),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt3[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt3[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_Head_DL_mesh_layer_1_mat_override_KineEyes_3),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_Head_DL_mesh_layer_1_mat_override_KineEyes_3),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt4[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt4[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_Head_DL_mesh_layer_1_mat_override_KineEyes_3),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_Head_DL_mesh_layer_1_mat_override_KineEyes_3),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt5[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt5[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_Head_DL_mesh_layer_1_mat_override_KineEyes_3),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_Head_DL_mesh_layer_1_mat_override_KineEyes_3),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt6[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt6[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_Head_DL_mesh_layer_1_mat_override_KineEyes_3),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_Head_DL_mesh_layer_1_mat_override_KineEyes_3),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt7[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt7[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_Head_DL_mesh_layer_1_mat_override_KineEyesDead_4),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_Head_DL_mesh_layer_1_mat_override_KineEyesDead_4),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 0, 0, 0, NULL),
@@ -293,25 +293,25 @@ const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1[] = {
 											GEO_OPEN_NODE(),
 												GEO_NODE_START(),
 												GEO_OPEN_NODE(),
-													GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_Head_DL_mesh_layer_1),
+													GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_Head_DL_mesh_layer_1),
 												GEO_CLOSE_NODE(),
-												GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt1),
-												GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt2),
-												GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt3),
-												GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt4),
-												GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt5),
-												GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt6),
-												GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt7),
+												GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt1),
+												GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt2),
+												GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt3),
+												GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt4),
+												GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt5),
+												GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt6),
+												GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_Capless_Switch_opt0_Eye_State_Switch_opt7),
 											GEO_CLOSE_NODE(),
 										GEO_CLOSE_NODE(),
-										GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_Capless_Head),
+										GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_rock_Capless_Head),
 									GEO_CLOSE_NODE(),
 									GEO_TRANSLATE_ROTATE(LAYER_FORCE, 135, -51, 126, -15, 33, -133),
 									GEO_OPEN_NODE(),
 										GEO_ASM(1, geo_mario_rotate_wing_cap_wings),
 										GEO_ROTATION_NODE(LAYER_FORCE, 0, 0, 0),
 										GEO_OPEN_NODE(),
-											GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_Left_Wing_DL_mesh_layer_4),
+											GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_Left_Wing_DL_mesh_layer_4),
 										GEO_CLOSE_NODE(),
 									GEO_CLOSE_NODE(),
 									GEO_TRANSLATE_ROTATE(LAYER_FORCE, 135, -51, -126, 15, -33, -133),
@@ -319,7 +319,7 @@ const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1[] = {
 										GEO_ASM(0, geo_mario_rotate_wing_cap_wings),
 										GEO_ROTATION_NODE(LAYER_FORCE, 0, 0, 0),
 										GEO_OPEN_NODE(),
-											GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_Right_Wing_DL_mesh_layer_4),
+											GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_Right_Wing_DL_mesh_layer_4),
 										GEO_CLOSE_NODE(),
 									GEO_CLOSE_NODE(),
 								GEO_CLOSE_NODE(),
@@ -342,7 +342,7 @@ const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1[] = {
 													GEO_CLOSE_NODE(),
 												GEO_CLOSE_NODE(),
 											GEO_CLOSE_NODE(),
-											GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_Left_Hand_Open),
+											GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_rock_Left_Hand_Open),
 										GEO_CLOSE_NODE(),
 									GEO_CLOSE_NODE(),
 								GEO_CLOSE_NODE(),
@@ -366,10 +366,10 @@ const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1[] = {
 													GEO_HELD_OBJECT(0, 0, 0, 0, geo_switch_mario_hand_grab_pos),
 												GEO_CLOSE_NODE(),
 											GEO_CLOSE_NODE(),
-											GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_Right_Hand_Open),
-											GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_Right_Hand_Peace),
-											GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_Right_Hand_Cap),
-											GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_Right_Hand_Wing_Cap),
+											GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_rock_Right_Hand_Open),
+											GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_rock_Right_Hand_Peace),
+											GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_rock_Right_Hand_Cap),
+											GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1_jump_kine_tf_rock_Right_Hand_Wing_Cap),
 										GEO_CLOSE_NODE(),
 									GEO_CLOSE_NODE(),
 								GEO_CLOSE_NODE(),
@@ -408,27 +408,27 @@ const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1[] = {
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_Capless_Head[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_rock_Capless_Head[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_SWITCH_CASE(0, geo_switch_mario_eyes),
 		GEO_OPEN_NODE(),
 			GEO_NODE_START(),
 			GEO_OPEN_NODE(),
-				GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Metal__METAL__0),
+				GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_rock_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Metal__METAL__0),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_Left_Hand_Open[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_rock_Left_Hand_Open[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 60, 0, 0, NULL),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_Right_Hand_Open[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_rock_Right_Hand_Open[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 60, 0, 0, NULL),
@@ -438,21 +438,21 @@ const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_Rig
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_Right_Hand_Peace[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_rock_Right_Hand_Peace[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 60, 0, 0, NULL),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_Right_Hand_Cap[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_rock_Right_Hand_Cap[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 60, 0, 0, NULL),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_Right_Hand_Wing_Cap[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_rock_Right_Hand_Wing_Cap[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 60, 0, 0, NULL),
@@ -461,7 +461,7 @@ const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_Rig
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt2[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt2[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 0, 0, 0, NULL),
@@ -489,18 +489,18 @@ const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt2[] = {
 											GEO_OPEN_NODE(),
 												GEO_NODE_START(),
 												GEO_OPEN_NODE(),
-													GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_Head_DL_mesh_layer_1_mat_override_Metal__METAL__0),
+													GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_rock_Head_DL_mesh_layer_1_mat_override_Metal__METAL__0),
 												GEO_CLOSE_NODE(),
 											GEO_CLOSE_NODE(),
 										GEO_CLOSE_NODE(),
-										GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_Capless_Head),
+										GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_rock_Capless_Head),
 									GEO_CLOSE_NODE(),
 									GEO_TRANSLATE_ROTATE(LAYER_FORCE, 135, -51, 126, -15, 33, -133),
 									GEO_OPEN_NODE(),
 										GEO_ASM(1, geo_mario_rotate_wing_cap_wings),
 										GEO_ROTATION_NODE(LAYER_FORCE, 0, 0, 0),
 										GEO_OPEN_NODE(),
-											GEO_DISPLAY_LIST(LAYER_ALPHA, kine_tf_Left_Wing_DL_mesh_layer_4_mat_override_Metal__METAL__0),
+											GEO_DISPLAY_LIST(LAYER_ALPHA, kine_tf_rock_Left_Wing_DL_mesh_layer_4_mat_override_Metal__METAL__0),
 										GEO_CLOSE_NODE(),
 									GEO_CLOSE_NODE(),
 									GEO_TRANSLATE_ROTATE(LAYER_FORCE, 135, -51, -126, 15, -33, -133),
@@ -508,7 +508,7 @@ const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt2[] = {
 										GEO_ASM(0, geo_mario_rotate_wing_cap_wings),
 										GEO_ROTATION_NODE(LAYER_FORCE, 0, 0, 0),
 										GEO_OPEN_NODE(),
-											GEO_DISPLAY_LIST(LAYER_ALPHA, kine_tf_Right_Wing_DL_mesh_layer_4_mat_override_Metal__METAL__0),
+											GEO_DISPLAY_LIST(LAYER_ALPHA, kine_tf_rock_Right_Wing_DL_mesh_layer_4_mat_override_Metal__METAL__0),
 										GEO_CLOSE_NODE(),
 									GEO_CLOSE_NODE(),
 								GEO_CLOSE_NODE(),
@@ -531,7 +531,7 @@ const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt2[] = {
 													GEO_CLOSE_NODE(),
 												GEO_CLOSE_NODE(),
 											GEO_CLOSE_NODE(),
-											GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_Left_Hand_Open),
+											GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_rock_Left_Hand_Open),
 										GEO_CLOSE_NODE(),
 									GEO_CLOSE_NODE(),
 								GEO_CLOSE_NODE(),
@@ -555,10 +555,10 @@ const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt2[] = {
 													GEO_HELD_OBJECT(0, 0, 0, 0, geo_switch_mario_hand_grab_pos),
 												GEO_CLOSE_NODE(),
 											GEO_CLOSE_NODE(),
-											GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_Right_Hand_Open),
-											GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_Right_Hand_Peace),
-											GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_Right_Hand_Cap),
-											GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_Right_Hand_Wing_Cap),
+											GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_rock_Right_Hand_Open),
+											GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_rock_Right_Hand_Peace),
+											GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_rock_Right_Hand_Cap),
+											GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt2_jump_kine_tf_rock_Right_Hand_Wing_Cap),
 										GEO_CLOSE_NODE(),
 									GEO_CLOSE_NODE(),
 								GEO_CLOSE_NODE(),
@@ -597,27 +597,27 @@ const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt2[] = {
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_Capless_Head[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_rock_Capless_Head[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_SWITCH_CASE(0, geo_switch_mario_eyes),
 		GEO_OPEN_NODE(),
 			GEO_NODE_START(),
 			GEO_OPEN_NODE(),
-				GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Metal__METAL__0),
+				GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Metal__METAL__0),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_Left_Hand_Open[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_rock_Left_Hand_Open[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 60, 0, 0, NULL),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_Right_Hand_Open[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_rock_Right_Hand_Open[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 60, 0, 0, NULL),
@@ -627,21 +627,21 @@ const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_Rig
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_Right_Hand_Peace[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_rock_Right_Hand_Peace[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 60, 0, 0, NULL),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_Right_Hand_Cap[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_rock_Right_Hand_Cap[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 60, 0, 0, NULL),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_Right_Hand_Wing_Cap[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_rock_Right_Hand_Wing_Cap[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 60, 0, 0, NULL),
@@ -650,7 +650,7 @@ const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_Rig
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt3[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt3[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_ANIMATED_PART(LAYER_OPAQUE, 0, 0, 0, NULL),
@@ -678,18 +678,18 @@ const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt3[] = {
 											GEO_OPEN_NODE(),
 												GEO_NODE_START(),
 												GEO_OPEN_NODE(),
-													GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_Head_DL_mesh_layer_1_mat_override_Metal__METAL__0),
+													GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_Head_DL_mesh_layer_1_mat_override_Metal__METAL__0),
 												GEO_CLOSE_NODE(),
 											GEO_CLOSE_NODE(),
 										GEO_CLOSE_NODE(),
-										GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_Capless_Head),
+										GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_rock_Capless_Head),
 									GEO_CLOSE_NODE(),
 									GEO_TRANSLATE_ROTATE(LAYER_FORCE, 135, -51, 126, -15, 33, -133),
 									GEO_OPEN_NODE(),
 										GEO_ASM(1, geo_mario_rotate_wing_cap_wings),
 										GEO_ROTATION_NODE(LAYER_FORCE, 0, 0, 0),
 										GEO_OPEN_NODE(),
-											GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_Left_Wing_DL_mesh_layer_4_mat_override_Metal__METAL__0),
+											GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_Left_Wing_DL_mesh_layer_4_mat_override_Metal__METAL__0),
 										GEO_CLOSE_NODE(),
 									GEO_CLOSE_NODE(),
 									GEO_TRANSLATE_ROTATE(LAYER_FORCE, 135, -51, -126, 15, -33, -133),
@@ -697,7 +697,7 @@ const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt3[] = {
 										GEO_ASM(0, geo_mario_rotate_wing_cap_wings),
 										GEO_ROTATION_NODE(LAYER_FORCE, 0, 0, 0),
 										GEO_OPEN_NODE(),
-											GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_Right_Wing_DL_mesh_layer_4_mat_override_Metal__METAL__0),
+											GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_Right_Wing_DL_mesh_layer_4_mat_override_Metal__METAL__0),
 										GEO_CLOSE_NODE(),
 									GEO_CLOSE_NODE(),
 								GEO_CLOSE_NODE(),
@@ -720,7 +720,7 @@ const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt3[] = {
 													GEO_CLOSE_NODE(),
 												GEO_CLOSE_NODE(),
 											GEO_CLOSE_NODE(),
-											GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_Left_Hand_Open),
+											GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_rock_Left_Hand_Open),
 										GEO_CLOSE_NODE(),
 									GEO_CLOSE_NODE(),
 								GEO_CLOSE_NODE(),
@@ -744,10 +744,10 @@ const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt3[] = {
 													GEO_HELD_OBJECT(0, 0, 0, 0, geo_switch_mario_hand_grab_pos),
 												GEO_CLOSE_NODE(),
 											GEO_CLOSE_NODE(),
-											GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_Right_Hand_Open),
-											GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_Right_Hand_Peace),
-											GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_Right_Hand_Cap),
-											GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_Right_Hand_Wing_Cap),
+											GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_rock_Right_Hand_Open),
+											GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_rock_Right_Hand_Peace),
+											GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_rock_Right_Hand_Cap),
+											GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt3_jump_kine_tf_rock_Right_Hand_Wing_Cap),
 										GEO_CLOSE_NODE(),
 									GEO_CLOSE_NODE(),
 								GEO_CLOSE_NODE(),
@@ -786,56 +786,56 @@ const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt3[] = {
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt1[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt1[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_Head_DL_mesh_layer_1_mat_override_KineEyesHalf_1),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_rock_Head_DL_mesh_layer_1_mat_override_KineEyesHalf_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt2[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt2[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_Head_DL_mesh_layer_1_mat_override_KineEyesClosed_2),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_rock_Head_DL_mesh_layer_1_mat_override_KineEyesClosed_2),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt3[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt3[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_Head_DL_mesh_layer_1_mat_override_KineEyes_3),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_rock_Head_DL_mesh_layer_1_mat_override_KineEyes_3),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt4[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt4[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_Head_DL_mesh_layer_1_mat_override_KineEyes_3),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_rock_Head_DL_mesh_layer_1_mat_override_KineEyes_3),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt5[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt5[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_Head_DL_mesh_layer_1_mat_override_KineEyes_3),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_rock_Head_DL_mesh_layer_1_mat_override_KineEyes_3),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt6[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt6[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_Head_DL_mesh_layer_1_mat_override_KineEyes_3),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_rock_Head_DL_mesh_layer_1_mat_override_KineEyes_3),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt7[] = {
+const GeoLayout kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt7[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_Head_DL_mesh_layer_1_mat_override_KineEyesDead_4),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_rock_Head_DL_mesh_layer_1_mat_override_KineEyesDead_4),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout kine_tf_geo[] = {
+const GeoLayout kine_tf_rock_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_SHADOW(99, 180, 100),
@@ -886,25 +886,25 @@ const GeoLayout kine_tf_geo[] = {
 																	GEO_OPEN_NODE(),
 																		GEO_NODE_START(),
 																		GEO_OPEN_NODE(),
-																			GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_Head_DL_mesh_layer_1),
+																			GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_rock_Head_DL_mesh_layer_1),
 																		GEO_CLOSE_NODE(),
-																		GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt1),
-																		GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt2),
-																		GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt3),
-																		GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt4),
-																		GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt5),
-																		GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt6),
-																		GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt7),
+																		GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt1),
+																		GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt2),
+																		GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt3),
+																		GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt4),
+																		GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt5),
+																		GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt6),
+																		GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt0_Capless_Switch_opt0_Eye_State_Switch_opt7),
 																	GEO_CLOSE_NODE(),
 																GEO_CLOSE_NODE(),
-																GEO_BRANCH(1, kine_tf_Capless_Head),
+																GEO_BRANCH(1, kine_tf_rock_Capless_Head),
 															GEO_CLOSE_NODE(),
 															GEO_TRANSLATE_ROTATE(LAYER_FORCE, 135, -51, 126, -15, 33, -133),
 															GEO_OPEN_NODE(),
 																GEO_ASM(1, geo_mario_rotate_wing_cap_wings),
 																GEO_ROTATION_NODE(LAYER_FORCE, 0, 0, 0),
 																GEO_OPEN_NODE(),
-																	GEO_DISPLAY_LIST(LAYER_ALPHA, kine_tf_Left_Wing_DL_mesh_layer_4),
+																	GEO_DISPLAY_LIST(LAYER_ALPHA, kine_tf_rock_Left_Wing_DL_mesh_layer_4),
 																GEO_CLOSE_NODE(),
 															GEO_CLOSE_NODE(),
 															GEO_TRANSLATE_ROTATE(LAYER_FORCE, 135, -51, -126, 15, -33, -133),
@@ -912,7 +912,7 @@ const GeoLayout kine_tf_geo[] = {
 																GEO_ASM(0, geo_mario_rotate_wing_cap_wings),
 																GEO_ROTATION_NODE(LAYER_FORCE, 0, 0, 0),
 																GEO_OPEN_NODE(),
-																	GEO_DISPLAY_LIST(LAYER_ALPHA, kine_tf_Right_Wing_DL_mesh_layer_4),
+																	GEO_DISPLAY_LIST(LAYER_ALPHA, kine_tf_rock_Right_Wing_DL_mesh_layer_4),
 																GEO_CLOSE_NODE(),
 															GEO_CLOSE_NODE(),
 														GEO_CLOSE_NODE(),
@@ -935,7 +935,7 @@ const GeoLayout kine_tf_geo[] = {
 																			GEO_CLOSE_NODE(),
 																		GEO_CLOSE_NODE(),
 																	GEO_CLOSE_NODE(),
-																	GEO_BRANCH(1, kine_tf_Left_Hand_Open),
+																	GEO_BRANCH(1, kine_tf_rock_Left_Hand_Open),
 																GEO_CLOSE_NODE(),
 															GEO_CLOSE_NODE(),
 														GEO_CLOSE_NODE(),
@@ -959,10 +959,10 @@ const GeoLayout kine_tf_geo[] = {
 																			GEO_HELD_OBJECT(0, 0, 0, 0, geo_switch_mario_hand_grab_pos),
 																		GEO_CLOSE_NODE(),
 																	GEO_CLOSE_NODE(),
-																	GEO_BRANCH(1, kine_tf_Right_Hand_Open),
-																	GEO_BRANCH(1, kine_tf_Right_Hand_Peace),
-																	GEO_BRANCH(1, kine_tf_Right_Hand_Cap),
-																	GEO_BRANCH(1, kine_tf_Right_Hand_Wing_Cap),
+																	GEO_BRANCH(1, kine_tf_rock_Right_Hand_Open),
+																	GEO_BRANCH(1, kine_tf_rock_Right_Hand_Peace),
+																	GEO_BRANCH(1, kine_tf_rock_Right_Hand_Cap),
+																	GEO_BRANCH(1, kine_tf_rock_Right_Hand_Wing_Cap),
 																GEO_CLOSE_NODE(),
 															GEO_CLOSE_NODE(),
 														GEO_CLOSE_NODE(),
@@ -999,9 +999,9 @@ const GeoLayout kine_tf_geo[] = {
 									GEO_CLOSE_NODE(),
 								GEO_CLOSE_NODE(),
 							GEO_CLOSE_NODE(),
-							GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt1),
-							GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt2),
-							GEO_BRANCH(1, kine_tf_B_LoD_Switch_opt0_Cap_State_Switch_opt3),
+							GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt1),
+							GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt2),
+							GEO_BRANCH(1, kine_tf_rock_B_LoD_Switch_opt0_Cap_State_Switch_opt3),
 						GEO_CLOSE_NODE(),
 					GEO_CLOSE_NODE(),
 				GEO_CLOSE_NODE(),
@@ -1012,9 +1012,9 @@ const GeoLayout kine_tf_geo[] = {
 				GEO_ASM((LAYER_TRANSPARENT_DECAL << 2) | 1, geo_mirror_mario_backface_culling),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_material_revert_render_settings),
-		GEO_DISPLAY_LIST(LAYER_ALPHA, kine_tf_material_revert_render_settings),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_material_revert_render_settings),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, kine_tf_rock_material_revert_render_settings),
+		GEO_DISPLAY_LIST(LAYER_ALPHA, kine_tf_rock_material_revert_render_settings),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, kine_tf_rock_material_revert_render_settings),
 	GEO_CLOSE_NODE(),
 	GEO_END(),
 };

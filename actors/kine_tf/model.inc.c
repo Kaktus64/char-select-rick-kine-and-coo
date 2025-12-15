@@ -309,42 +309,6 @@ Gfx kine_tf_Head_DL_mesh_layer_1_tri_3[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_vtx_0[8] = {
-	{{{131, -259, 142}, 0, {990, 0}, {0x4C, 0x30, 0x5A, 0xFF}}},
-	{{{19, -51, 126}, 0, {0, 2012}, {0x4C, 0x30, 0x5A, 0xFF}}},
-	{{{-20, -120, 196}, 0, {990, 2012}, {0x4C, 0x30, 0x5A, 0xFF}}},
-	{{{170, -190, 73}, 0, {0, 0}, {0x4C, 0x30, 0x5A, 0xFF}}},
-	{{{131, -259, -142}, 0, {990, 0}, {0xB4, 0xD0, 0x5A, 0xFF}}},
-	{{{19, -51, -126}, 0, {0, 2012}, {0xB4, 0xD0, 0x5A, 0xFF}}},
-	{{{-20, -120, -196}, 0, {990, 2012}, {0xB4, 0xD0, 0x5A, 0xFF}}},
-	{{{170, -190, -73}, 0, {0, 0}, {0xB4, 0xD0, 0x5A, 0xFF}}},
-};
-
-Gfx kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0[] = {
-	gsSPVertex(kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_vtx_0 + 0, 8, 0),
-	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
-	gsSP2Triangles(4, 5, 6, 0, 4, 7, 5, 0),
-	gsSPEndDisplayList(),
-};
-
-Vtx kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_vtx_1[8] = {
-	{{{209, -121, 4}, 0, {0, 0}, {0x4C, 0x30, 0x5A, 0xFF}}},
-	{{{58, 18, 57}, 0, {0, 2012}, {0x4C, 0x30, 0x5A, 0xFF}}},
-	{{{19, -51, 126}, 0, {990, 2012}, {0x4C, 0x30, 0x5A, 0xFF}}},
-	{{{170, -190, 73}, 0, {990, 0}, {0x4C, 0x30, 0x5A, 0xFF}}},
-	{{{209, -121, -4}, 0, {0, 0}, {0xB4, 0xD0, 0x5A, 0xFF}}},
-	{{{58, 18, -57}, 0, {0, 2012}, {0xB4, 0xD0, 0x5A, 0xFF}}},
-	{{{19, -51, -126}, 0, {990, 2012}, {0xB4, 0xD0, 0x5A, 0xFF}}},
-	{{{170, -190, -73}, 0, {990, 0}, {0xB4, 0xD0, 0x5A, 0xFF}}},
-};
-
-Gfx kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_1[] = {
-	gsSPVertex(kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_vtx_1 + 0, 8, 0),
-	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
-	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
-	gsSPEndDisplayList(),
-};
-
 Vtx kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0[25] = {
 	{{{-103, 242, 0}, 0, {240, 688}, {0x88, 0xD5, 0x00, 0xFF}}},
 	{{{-84, 220, 42}, 0, {309, 653}, {0xB6, 0xC6, 0x55, 0xFF}}},
@@ -646,7 +610,7 @@ Gfx kine_tf_Right_Wing_DL_mesh_layer_4_tri_1[] = {
 
 
 Gfx mat_kine_tf_Fast3D_Material_004[] = {
-	gsSPSetLights1(kine_tf_Fast3D_Material_004_lights),
+	gsSPCopyLightsPlayerPart(GLOVES),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -661,7 +625,7 @@ Gfx mat_revert_kine_tf_Fast3D_Material_004[] = {
 };
 
 Gfx mat_kine_tf_Fast3D_Material_006[] = {
-	gsSPSetLights1(kine_tf_Fast3D_Material_006_lights),
+	gsSPCopyLightsPlayerPart(SKIN),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -676,7 +640,7 @@ Gfx mat_revert_kine_tf_Fast3D_Material_006[] = {
 };
 
 Gfx mat_kine_tf_KineEyes[] = {
-	gsSPSetLights1(kine_tf_KineEyes_lights),
+	gsSPCopyLightsPlayerPart(SKIN),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -697,7 +661,7 @@ Gfx mat_revert_kine_tf_KineEyes[] = {
 
 Gfx mat_kine_tf_Fast3D_Material_007[] = {
 	gsSPGeometryMode(G_CULL_BACK, 0),
-	gsSPSetLights1(kine_tf_Fast3D_Material_007_lights),
+	gsSPCopyLightsPlayerPart(SHOES),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -742,7 +706,7 @@ Gfx mat_revert_kine_tf_Metal__METAL_[] = {
 };
 
 Gfx mat_kine_tf_KineEyesHalf[] = {
-	gsSPSetLights1(kine_tf_KineEyesHalf_lights),
+	gsSPCopyLightsPlayerPart(SKIN),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -762,7 +726,7 @@ Gfx mat_revert_kine_tf_KineEyesHalf[] = {
 };
 
 Gfx mat_kine_tf_KineEyesClosed[] = {
-	gsSPSetLights1(kine_tf_KineEyesClosed_lights),
+	gsSPCopyLightsPlayerPart(SKIN),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -782,7 +746,7 @@ Gfx mat_revert_kine_tf_KineEyesClosed[] = {
 };
 
 Gfx mat_kine_tf_KineEyesDead[] = {
-	gsSPSetLights1(kine_tf_KineEyesDead_lights),
+	gsSPCopyLightsPlayerPart(SKIN),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -930,66 +894,6 @@ Gfx kine_tf_Head_DL_mesh_layer_1_mat_override_KineEyesDead_4[] = {
 	gsSPDisplayList(mat_kine_tf_Fast3D_Material_007),
 	gsSPDisplayList(kine_tf_Head_DL_mesh_layer_1_tri_3),
 	gsSPDisplayList(mat_revert_kine_tf_Fast3D_Material_007),
-	gsSPEndDisplayList(),
-};
-
-Gfx kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4[] = {
-	gsSPDisplayList(mat_kine_tf_Wing_Tip),
-	gsSPDisplayList(kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_kine_tf_Wing_Tip),
-	gsSPDisplayList(mat_kine_tf_Wing_Base),
-	gsSPDisplayList(kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_1),
-	gsSPDisplayList(mat_revert_kine_tf_Wing_Base),
-	gsSPEndDisplayList(),
-};
-
-Gfx kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Metal__METAL__0[] = {
-	gsSPDisplayList(mat_kine_tf_Wing_Tip),
-	gsSPDisplayList(kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_kine_tf_Wing_Tip),
-	gsSPDisplayList(mat_kine_tf_Wing_Base),
-	gsSPDisplayList(kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_1),
-	gsSPDisplayList(mat_revert_kine_tf_Wing_Base),
-	gsSPEndDisplayList(),
-};
-
-Gfx kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_KineEyesHalf_1[] = {
-	gsSPDisplayList(mat_kine_tf_Wing_Tip),
-	gsSPDisplayList(kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_kine_tf_Wing_Tip),
-	gsSPDisplayList(mat_kine_tf_Wing_Base),
-	gsSPDisplayList(kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_1),
-	gsSPDisplayList(mat_revert_kine_tf_Wing_Base),
-	gsSPEndDisplayList(),
-};
-
-Gfx kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_KineEyesClosed_2[] = {
-	gsSPDisplayList(mat_kine_tf_Wing_Tip),
-	gsSPDisplayList(kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_kine_tf_Wing_Tip),
-	gsSPDisplayList(mat_kine_tf_Wing_Base),
-	gsSPDisplayList(kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_1),
-	gsSPDisplayList(mat_revert_kine_tf_Wing_Base),
-	gsSPEndDisplayList(),
-};
-
-Gfx kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_KineEyes_3[] = {
-	gsSPDisplayList(mat_kine_tf_Wing_Tip),
-	gsSPDisplayList(kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_kine_tf_Wing_Tip),
-	gsSPDisplayList(mat_kine_tf_Wing_Base),
-	gsSPDisplayList(kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_1),
-	gsSPDisplayList(mat_revert_kine_tf_Wing_Base),
-	gsSPEndDisplayList(),
-};
-
-Gfx kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_KineEyesDead_4[] = {
-	gsSPDisplayList(mat_kine_tf_Wing_Tip),
-	gsSPDisplayList(kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_kine_tf_Wing_Tip),
-	gsSPDisplayList(mat_kine_tf_Wing_Base),
-	gsSPDisplayList(kine_tf_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_1),
-	gsSPDisplayList(mat_revert_kine_tf_Wing_Base),
 	gsSPEndDisplayList(),
 };
 
