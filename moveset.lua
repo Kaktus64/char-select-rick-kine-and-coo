@@ -4,6 +4,8 @@ local E_MODEL_RICK_TH_ROCK = smlua_model_util_get_id("rick_th_rock_geo")
 
 local E_MODEL_COO_TO = smlua_model_util_get_id("coo_to_geo")
 
+local E_MODEL_KINE_TF = smlua_model_util_get_id("kine_tf_geo")
+
 function is_rick_th()
     return CT_RICK_TH == charSelect.character_get_current_number()
 end
@@ -53,11 +55,15 @@ local returnToRickActions = {
     [ACT_LEDGE_GRAB] = true,
     [ACT_FORWARD_ROLLOUT] = true,
     [ACT_DOUBLE_JUMP] = true,
+    [ACT_JUMP] = true,
+    [ACT_STEEP_JUMP] = true,
+    [ACT_JUMP_LAND] = true,
 }
 local returnToKineActions = {
     [ACT_SWIMMING_END] = true,
     [ACT_WATER_ACTION_END] = true,
     [ACT_WATER_IDLE] = true,
+    [ACT_WATER_PLUNGE] = true,
 }
 
 local rickSlipperySurfaces = {
@@ -288,6 +294,11 @@ function rick_th_update(m)
         charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
     "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
     "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_RICK_TH, CT_MARIO, RICK_TH_ICON, 1)
+    end
+    if returnToKineActions[m.action] == true and m.playerIndex == 0 then
+        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+    "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
+    "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_KINE_TF, CT_MARIO, RICK_TH_ICON, 1)
     end
     if _G.charSelect.is_menu_open() == true and m.pos.y == m.floorHeight and m.action ~= ACT_RICK_ROLL and m.playerIndex == 0 then
         charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",

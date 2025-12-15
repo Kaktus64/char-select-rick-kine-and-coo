@@ -15,6 +15,8 @@ local E_MODEL_RICK_TH_ROCK = smlua_model_util_get_id("rick_th_rock_geo")
 
 local E_MODEL_COO_TO = smlua_model_util_get_id("coo_to_geo")
 
+local E_MODEL_KINE_TF = smlua_model_util_get_id("kine_tf_geo")
+
 local RICK_TH_ICON = get_texture_info("rick_th_icon")
 
 local TEX_RICK_TH_GRAFFITI = get_texture_info("RICK_TH_GRAFFITI")
@@ -162,6 +164,7 @@ local function on_character_select_load()
     _G.charSelect.character_add_voice(E_MODEL_RICK_TH, VOICETABLE_RICK_TH)
     _G.charSelect.character_add_voice(E_MODEL_RICK_TH_ROCK, VOICETABLE_RICK_TH)
     _G.charSelect.character_add_voice(E_MODEL_COO_TO, VOICETABLE_RICK_TH)
+    _G.charSelect.character_add_voice(E_MODEL_KINE_TF, VOICETABLE_RICK_TH)
     _G.charSelect.character_add_graffiti(CT_RICK_TH, TEX_RICK_TH_GRAFFITI)
 
     -- PALETTES
