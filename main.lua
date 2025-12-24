@@ -159,10 +159,10 @@ local PALETTE_KINE_AIR_RIDERS = {
 
     [PANTS]  = "ebe2c4",
     [SHIRT]  = "a17c66",
-    [GLOVES] = "DB9C70",
-    [SHOES]  = "d46d50",
-    [HAIR]   = "743F39",
-    [SKIN]   = "ebe2c4",
+    [GLOVES] = "b5a5a6",
+    [SHOES]  = "ced6d9",
+    [HAIR]   = "ced6d9",
+    [SKIN]   = "98a1a8",
     [CAP]    = "ac937d",
 	[EMBLEM] = "ff6993"
 }
@@ -171,10 +171,10 @@ local PALETTE_PICK_KINE = {
 
     [PANTS]  = "FFFFFF",
     [SHIRT]  = "f09088",
-    [GLOVES] = "DB9C70",
-    [SHOES]  = "d11daa",
+    [GLOVES] = "f0a8a0",
+    [SHOES]  = "f8d078",
     [HAIR]   = "2b1927",
-    [SKIN]   = "ffedfb",
+    [SKIN]   = "f0a8a0",
     [CAP]    = "ffb8ef",
 	[EMBLEM] = "ff6993"
 }
@@ -183,7 +183,7 @@ local PALETTE_KIRBY_KTF = {
 
     [PANTS]  = "fc96be",
     [SHIRT]  = "fc96be",
-    [GLOVES] = "DB9C70",
+    [GLOVES] = "fc96be",
     [SHOES]  = "e5200f",
     [HAIR]   = "fc96be",
     [SKIN]   = "fc96be",
@@ -195,10 +195,10 @@ local PALETTE_KINE_DL2 = {
 
     [PANTS]  = "ffffff",
     [SHIRT]  = "f8c088",
-    [GLOVES] = "DB9C70",
-    [SHOES]  = "ffe500",
+    [GLOVES] = "ffffff",
+    [SHOES]  = "ffffff",
     [HAIR]   = "000000",
-    [SKIN]   = "ffffff",
+    [SKIN]   = "6abdff",
     [CAP]    = "a9b1c1",
 	[EMBLEM] = "e5200f"
 }
@@ -229,6 +229,7 @@ local function on_character_select_load()
     _G.charSelect.character_add_voice(E_MODEL_KINE_TF, VOICETABLE_RICK_TH)
     _G.charSelect.character_add_voice(E_MODEL_KINE_TF_ROCK, VOICETABLE_RICK_TH)
     _G.charSelect.character_add_graffiti(CT_RICK_TH, TEX_RICK_TH_GRAFFITI)
+    _G.charSelect.character_set_nickname(CT_RICK_TH, "Rick")
 
     -- PALETTES
 

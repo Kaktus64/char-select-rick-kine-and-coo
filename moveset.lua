@@ -88,6 +88,8 @@ ACT_RICK_ROLL_AIR = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | AC
 ACT_RICK_ROLL = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_ATTACKING | ACT_FLAG_MOVING)
 ACT_COO_FLY = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_MOVING)
 ACT_COO_SPIN = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_MOVING | ACT_FLAG_ATTACKING)
+ACT_KINE_SWIM_IDLE = allocate_mario_action(ACT_GROUP_SUBMERGED | ACT_FLAG_SWIMMING | ACT_FLAG_MOVING)
+ACT_KINE_SWIM_MOVE = allocate_mario_action(ACT_GROUP_SUBMERGED | ACT_FLAG_SWIMMING | ACT_FLAG_MOVING)
 
 function act_rick_roll(m)
     local e = gStateExtras[m.playerIndex]
@@ -216,6 +218,70 @@ function act_coo_spin(m)
 end
 hook_mario_action(ACT_COO_SPIN, act_coo_spin)
 
+local function act_kine_swim_idle(m)
+ local e = gStateExtras[m.playerIndex]
+    perform_water_step(m)
+    m.vel.x = 0
+    m.vel.z = 0
+    if (m.input & INPUT_A_DOWN) ~= 0 then
+        m.vel.y = 10
+    end
+    if (m.input & INPUT_A_DOWN) == 0 then
+        m.vel.y = m.vel.y - 2
+        if m.vel.y < 0 then m.vel.y = 0 end
+    end
+    if (m.input & INPUT_Z_DOWN) ~= 0 then
+        m.vel.y = -10
+    end
+    if (m.input & INPUT_Z_DOWN) == 0 then
+        m.vel.y = m.vel.y + 2
+        if m.vel.y > 0 then m.vel.y = 0 end
+    end
+    if m.input & INPUT_NONZERO_ANALOG ~= 0 then
+        set_mario_action(m, ACT_KINE_SWIM_MOVE, 0)
+    end
+    apply_water_current(m, m.vel)
+end
+hook_mario_action(ACT_KINE_SWIM_IDLE, act_kine_swim_idle)
+
+local function act_kine_swim_move(m)
+ local e = gStateExtras[m.playerIndex]
+    perform_water_step(m)
+
+    if m.input & INPUT_NONZERO_ANALOG ~= 0 then
+    m.forwardVel = m.forwardVel + 2
+    end
+    if (m.input & INPUT_A_DOWN) ~= 0 then
+        m.vel.y = 10
+    end
+    if (m.input & INPUT_A_DOWN) == 0 then
+        m.vel.y = m.vel.y - 2
+        if m.vel.y < 0 then m.vel.y = 0 end
+    end
+    if (m.input & INPUT_Z_DOWN) ~= 0 then
+        m.vel.y = -10
+    end
+    if (m.input & INPUT_Z_DOWN) == 0 then
+        m.vel.y = m.vel.y - 2
+        if m.vel.y > 0 then m.vel.y = 0 end
+    end
+    m.vel.x = m.forwardVel * sins(m.faceAngle.y) * coss(m.faceAngle.x)
+    m.vel.z = m.forwardVel * coss(m.faceAngle.y) * coss(m.faceAngle.x)
+    m.faceAngle.x = 0
+    m.faceAngle.y = m.intendedYaw - approach_s32(limit_angle(m.intendedYaw - m.faceAngle.y), 0, 0x400, 0x400)
+    if m.input & INPUT_NONZERO_ANALOG == 0 then
+        m.forwardVel = m.forwardVel - 3
+    end
+    if m.forwardVel < 5 then
+        set_mario_action(m, ACT_KINE_SWIM_IDLE, 0)
+    end
+    if m.forwardVel > 30 then
+        m.forwardVel = 30
+    end
+    apply_water_current(m, m.vel)
+    m.actionTimer = m.actionTimer + 1
+end
+hook_mario_action(ACT_KINE_SWIM_MOVE, act_kine_swim_move)
 
 function rick_th_update(m)
     local e = gStateExtras[m.playerIndex]
@@ -229,7 +295,7 @@ function rick_th_update(m)
         m.forwardVel = 39
         charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
         "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
-        "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_KINE_TF_ROCK, CT_MARIO, RICK_TH_ICON, 1)
+        "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_KINE_TF, CT_MARIO, RICK_TH_ICON, 1)
     end
     if m.action == ACT_GROUND_POUND and m.playerIndex == 0 then 
         smlua_anim_util_set_animation(m.marioObj, "kine_pound")
@@ -317,6 +383,9 @@ function rick_th_update(m)
         charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
     "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
     "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_RICK_TH, CT_MARIO, RICK_TH_ICON, 1)
+    end
+    if m.action == ACT_WATER_IDLE then
+        set_mario_action(m, ACT_KINE_SWIM_IDLE, 0)
     end
 end
 
