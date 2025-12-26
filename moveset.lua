@@ -233,7 +233,7 @@ local function act_kine_swim_idle(m)
     if (m.input & INPUT_Z_DOWN) ~= 0 then
         m.vel.y = -10
     end
-    if (m.input & INPUT_Z_DOWN) == 0 then
+    if (m.input & INPUT_Z_DOWN) == 0  then
         m.vel.y = m.vel.y + 2
         if m.vel.y > 0 then m.vel.y = 0 end
     end
@@ -291,6 +291,7 @@ function rick_th_update(m)
     end
     if m.action == ACT_GROUND_POUND and (m.input & INPUT_B_PRESSED) ~= 0 and m.playerIndex == 0 then
         set_mario_action(m, ACT_DIVE, 0)
+                    set_mario_particle_flags(m, PARTICLE_MIST_CIRCLE, 0)
         m.vel.y = 30
         m.forwardVel = 39
         charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
@@ -384,9 +385,9 @@ function rick_th_update(m)
     "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
     "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_RICK_TH, CT_MARIO, RICK_TH_ICON, 1)
     end
-    if m.action == ACT_WATER_IDLE then
-        set_mario_action(m, ACT_KINE_SWIM_IDLE, 0)
-    end
+    --if m.action == ACT_WATER_IDLE then
+        --set_mario_action(m, ACT_KINE_SWIM_IDLE, 0)
+    --end
 end
 
 function rick_th_set_action(m)
