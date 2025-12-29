@@ -61,6 +61,7 @@ local returnToRickActions = {
     [ACT_DIVE_SLIDE] = true,
     [ACT_BUTT_SLIDE] = true,
     [ACT_BUTT_SLIDE_STOP] = true,
+    [ACT_TRIPLE_JUMP_LAND] = true,
 }
 local returnToKineActions = {
     [ACT_SWIMMING_END] = true,
@@ -304,9 +305,6 @@ function rick_th_update(m)
         "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
         "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_KINE_TF_ROCK, CT_MARIO, RICK_TH_ICON, 1)
     end
-    if m.action == ACT_GROUND_POUND_LAND and m.playerIndex == 0 then 
-        smlua_anim_util_set_animation(m.marioObj, "kine_pound_land")
-    end
     if cooFlyActions[m.action] and m.vel.y < 0 and m.input & INPUT_A_PRESSED ~= 0 and e.cooyFlyCount ~= 5 then
         play_sound(SOUND_ACTION_SPIN, m.marioObj.header.gfx.cameraToObject)
         set_mario_action(m, ACT_COO_FLY, 0)
@@ -395,6 +393,9 @@ function rick_th_set_action(m)
     if m.action == ACT_RICK_ROLL and m.prevAction == ACT_RICK_ROLL_AIR then
         play_sound(SOUND_ACTION_TERRAIN_HEAVY_LANDING, m.marioObj.header.gfx.cameraToObject)
             set_mario_particle_flags(m, PARTICLE_MIST_CIRCLE, 0)
+    end
+    if m.action == ACT_SLIDE_KICK then
+        set_mario_action(m, ACT_RICK_ROLL, 0)
     end
 end
 

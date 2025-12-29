@@ -208,6 +208,11 @@ local ANIMTABLE_RICK_TH = {
     [CHAR_ANIM_IDLE_HEAD_CENTER] = "rick_th_idle",
     [CHAR_ANIM_IDLE_HEAD_LEFT] = "rick_th_idle",
     [CHAR_ANIM_IDLE_HEAD_RIGHT] = "rick_th_idle",
+    [ACT_WARP_DOOR_SPAWN] = "rick_th_idle",
+    [ACT_WAITING_FOR_DIALOG] = "rick_th_idle",
+    [ACT_READING_SIGN] = "rick_th_idle",
+    [ACT_READING_AUTOMATIC_DIALOG] = "rick_th_idle",
+    [ACT_READING_NPC_DIALOG] = "rick_th_idle",
 }
 
 local VOICETABLE_RICK_TH = {
@@ -229,7 +234,7 @@ local function on_character_select_load()
     _G.charSelect.character_add_voice(E_MODEL_KINE_TF, VOICETABLE_RICK_TH)
     _G.charSelect.character_add_voice(E_MODEL_KINE_TF_ROCK, VOICETABLE_RICK_TH)
     _G.charSelect.character_add_graffiti(CT_RICK_TH, TEX_RICK_TH_GRAFFITI)
-    _G.charSelect.character_set_nickname(CT_RICK_TH, "Rick")
+    _G.charSelect.character_set_nickname(CT_RICK_TH, "RickKineCoo")
 
     -- PALETTES
 
@@ -270,8 +275,14 @@ end
 function is_rick_th()
     return CT_RICK_TH == charSelect.character_get_current_number()
 end
-
-
+--[[
+if _G.charSelect.is_menu_open() == true then
+        _G.charSelect.character_set_nickname(CT_RICK_TH, "Rick, Kine & Coo")
+end
+if _G.charSelect.is_menu_open() == false then
+        _G.charSelect.character_set_nickname(CT_RICK_TH, "Rick")
+end
+--]]
 local function on_character_sound(m, sound)
     if not CSloaded then return end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_RICK_TH then return _G.charSelect.voice.sound(m, sound) end
