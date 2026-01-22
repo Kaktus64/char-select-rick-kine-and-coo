@@ -1,2 +1,4 @@
 # char-select-rick-kine-and-coo
-Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",     "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",     "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically.
+Friends by air, sea, and land! 
+The three animal friends from Kirby's Dream Land 2 are now a CS pack, all combined into one with a custom moveset! You'll swap to each animal friend depending on what you're doing.
+<img width="720" height="720" alt="image" src="https://github.com/user-attachments/assets/5826f445-91d0-4497-9995-3f6b48ebed09" />
