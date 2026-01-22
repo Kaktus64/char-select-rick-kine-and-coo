@@ -4,6 +4,8 @@ local E_MODEL_RICK_TH_ROCK = smlua_model_util_get_id("rick_th_rock_geo")
 
 local E_MODEL_COO_TO = smlua_model_util_get_id("coo_to_geo")
 
+local E_MODEL_COO_TO_PARA = smlua_model_util_get_id("coo_topara_geo")
+
 local E_MODEL_KINE_TF = smlua_model_util_get_id("kine_tf_geo")
 
 local E_MODEL_KINE_TF_ROCK = smlua_model_util_get_id("kine_tf_rock_geo")
@@ -62,12 +64,15 @@ local returnToRickActions = {
     [ACT_BUTT_SLIDE] = true,
     [ACT_BUTT_SLIDE_STOP] = true,
     [ACT_TRIPLE_JUMP_LAND] = true,
+    [ACT_STAR_DANCE_EXIT] = true,
+    [ACT_STAR_DANCE_NO_EXIT] = true,
 }
 local returnToKineActions = {
     [ACT_SWIMMING_END] = true,
     [ACT_WATER_ACTION_END] = true,
     [ACT_WATER_IDLE] = true,
     [ACT_WATER_PLUNGE] = true,
+    [ACT_STAR_DANCE_WATER] = true,
 }
 
 local rickSlipperySurfaces = {
@@ -121,10 +126,10 @@ function act_rick_roll(m)
         set_mario_particle_flags(m, PARTICLE_MIST_CIRCLE, 0)
         set_anim_to_frame(m, 0)
     end
-    if m.input & INPUT_B_PRESSED ~= 0 and m.actionTimer > 2 then
-        set_mario_action(m, ACT_DIVE, 0)
+    if m.input & INPUT_B_PRESSED ~= 0 and m.actionTimer > 1 then
+        set_mario_action(m, ACT_FORWARD_ROLLOUT, 0)
         set_mario_particle_flags(m, PARTICLE_MIST_CIRCLE, 0)
-        m.vel.y = 25
+        set_anim_to_frame(m, 0)
     end
     if m.actionTimer % 5 == 0 then
         play_sound(SOUND_ENV_METAL_BOX_PUSH, m.marioObj.header.gfx.cameraToObject)
@@ -152,9 +157,14 @@ hook_mario_action(ACT_RICK_ROLL_AIR, act_rick_roll_air)
 
 function act_coo_fly(m)
  local e = gStateExtras[m.playerIndex]
-    local stepResult = common_air_action_step(m, ACT_FREEFALL_LAND, CHAR_ANIM_RUNNING_UNUSED, AIR_STEP_CHECK_LEDGE_GRAB)
+    local stepResult = common_air_action_step(m, ACT_FREEFALL_LAND, CHAR_ANIM_RUNNING_UNUSED, AIR_STEP_NONE)
     m.faceAngle.y = m.intendedYaw - approach_s32(limit_angle(m.intendedYaw - m.faceAngle.y), 0, 0x300, 0x300)
     smlua_anim_util_set_animation(m.marioObj, "coo_fly")
+    if m.playerIndex == 0 then 
+    charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Animal Friends! Rick is a hamster-like creature who's quick on his feet,",
+        "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
+        "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_COO_TO, CT_MARIO, RICK_TH_ICON, 1)
+    end
     m.peakHeight = m.pos.y -- no fall sound
     if m.vel.y < -30 then
         m.vel.y = -30
@@ -188,16 +198,22 @@ end
 hook_mario_action(ACT_COO_FLY, act_coo_fly)
 function act_coo_spin(m)
  local e = gStateExtras[m.playerIndex]
-    local stepResult = common_air_action_step(m, ACT_FREEFALL_LAND, CHAR_ANIM_RUNNING_UNUSED, AIR_STEP_CHECK_LEDGE_GRAB)
+    local stepResult = common_air_action_step(m, ACT_FREEFALL_LAND, CHAR_ANIM_RUNNING_UNUSED, AIR_STEP_NONE)
     m.faceAngle.y = m.intendedYaw - approach_s32(limit_angle(m.intendedYaw - m.faceAngle.y), 0, 0x300, 0x300)
-    smlua_anim_util_set_animation(m.marioObj, "coo_fly")
+    smlua_anim_util_set_animation(m.marioObj, "coo_fly_spin")
+    if m.playerIndex == 0 then 
+    charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Animal Friends! Rick is a hamster-like creature who's quick on his feet,",
+        "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
+        "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_COO_TO_PARA, CT_MARIO, RICK_TH_ICON, 1)
+    end
     m.peakHeight = m.pos.y -- no fall sound
-    e.rotAngle = e.rotAngle + (m.actionTimer * 400)
-    m.marioObj.header.gfx.angle.y = e.rotAngle
     e.hasCooSpun = true
     m.vel.y = m.vel.y + 5
     if m.vel.y > 10 then
         m.vel.y = 10
+    end
+    if m.actionTimer == 0 then
+        m.marioObj.header.gfx.animInfo.animFrame = 0
     end
     if m.forwardVel > 30 then
         m.forwardVel = m.forwardVel - 2
@@ -292,16 +308,17 @@ function rick_th_update(m)
     end
     if m.action == ACT_GROUND_POUND and (m.input & INPUT_B_PRESSED) ~= 0 and m.playerIndex == 0 then
         set_mario_action(m, ACT_DIVE, 0)
+        m.faceAngle.y = m.intendedYaw
                     set_mario_particle_flags(m, PARTICLE_MIST_CIRCLE, 0)
         m.vel.y = 30
         m.forwardVel = 39
-        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Animal Friends! Rick is a hamster-like creature who's quick on his feet,",
         "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
         "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_KINE_TF, CT_MARIO, RICK_TH_ICON, 1)
     end
     if m.action == ACT_GROUND_POUND and m.playerIndex == 0 then 
         smlua_anim_util_set_animation(m.marioObj, "kine_pound")
-        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Animal Friends! Rick is a hamster-like creature who's quick on his feet,",
         "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
         "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_KINE_TF_ROCK, CT_MARIO, RICK_TH_ICON, 1)
     end
@@ -327,17 +344,17 @@ function rick_th_update(m)
         m.floor.type = SURFACE_CLASS_DEFAULT
     end
     if m.action == ACT_COO_FLY and m.playerIndex == 0 then
-        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Animal Friends! Rick is a hamster-like creature who's quick on his feet,",
     "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
     "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_COO_TO, CT_MARIO, RICK_TH_ICON, 1)
     end
     if m.action == ACT_FLYING and m.playerIndex == 0 then
-        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Animal Friends! Rick is a hamster-like creature who's quick on his feet,",
     "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
     "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_COO_TO, CT_MARIO, RICK_TH_ICON, 1)
     end
     if m.action == ACT_SHOT_FROM_CANNON and m.playerIndex == 0 then
-        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Animal Friends! Rick is a hamster-like creature who's quick on his feet,",
     "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
     "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_COO_TO, CT_MARIO, RICK_TH_ICON, 1)
     end
@@ -346,7 +363,7 @@ function rick_th_update(m)
         m.marioObj.header.gfx.scale.y = 1.1
         m.marioObj.header.gfx.scale.x = 1.1
         m.marioObj.header.gfx.scale.z = 1.1
-        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Animal Friends! Rick is a hamster-like creature who's quick on his feet,",
     "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
     "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_RICK_TH_ROCK, CT_MARIO, RICK_TH_ICON, 1)
     end
@@ -354,38 +371,39 @@ function rick_th_update(m)
         m.marioObj.header.gfx.scale.y = 1.1
         m.marioObj.header.gfx.scale.x = 1.1
         m.marioObj.header.gfx.scale.z = 1.1
-        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Animal Friends! Rick is a hamster-like creature who's quick on his feet,",
     "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
     "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_RICK_TH_ROCK, CT_MARIO, RICK_TH_ICON, 1)
     end
     if m.prevAction == ACT_RICK_ROLL and m.action ~= ACT_RICK_ROLL and m.action ~= ACT_RICK_ROLL_AIR and m.playerIndex == 0 then
-                charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+                charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Animal Friends! Rick is a hamster-like creature who's quick on his feet,",
     "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
     "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_RICK_TH, CT_MARIO, RICK_TH_ICON, 1)
     end
     if m.prevAction == ACT_RICK_ROLL_AIR and m.action ~= ACT_RICK_ROLL_AIR and m.action ~= ACT_RICK_ROLL and m.playerIndex == 0 then
-        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Animal Friends! Rick is a hamster-like creature who's quick on his feet,",
     "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
     "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_RICK_TH, CT_MARIO, RICK_TH_ICON, 1)
     end
     if returnToRickActions[m.action] == true and m.playerIndex == 0 then
-        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Animal Friends! Rick is a hamster-like creature who's quick on his feet,",
     "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
     "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_RICK_TH, CT_MARIO, RICK_TH_ICON, 1)
     end
     if returnToKineActions[m.action] == true and m.playerIndex == 0 then
-        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Animal Friends! Rick is a hamster-like creature who's quick on his feet,",
     "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
     "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_KINE_TF, CT_MARIO, RICK_TH_ICON, 1)
     end
     if _G.charSelect.is_menu_open() == true and m.pos.y == m.floorHeight and m.action ~= ACT_RICK_ROLL and m.playerIndex == 0 then
-        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+        charSelect.character_edit(CT_RICK_TH, "Rick, Kine & Coo", {"Kirby's Animal Friends! Rick is a hamster-like creature who's quick on his feet,",
     "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
     "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_RICK_TH, CT_MARIO, RICK_TH_ICON, 1)
     end
     --if m.action == ACT_WATER_IDLE then
         --set_mario_action(m, ACT_KINE_SWIM_IDLE, 0)
     --end
+
 end
 
 function rick_th_set_action(m)

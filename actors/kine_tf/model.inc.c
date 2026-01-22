@@ -660,7 +660,7 @@ Gfx mat_revert_kine_tf_KineEyes[] = {
 };
 
 Gfx mat_kine_tf_Fast3D_Material_007[] = {
-	gsSPGeometryMode(G_CULL_BACK, 0),
+	gsSPClearGeometryMode(G_CULL_BACK),
 	gsSPCopyLightsPlayerPart(SHOES),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
@@ -670,14 +670,14 @@ Gfx mat_kine_tf_Fast3D_Material_007[] = {
 };
 
 Gfx mat_revert_kine_tf_Fast3D_Material_007[] = {
-	gsSPGeometryMode(0, G_CULL_BACK),
+	gsSPSetGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_kine_tf_Metal__METAL_[] = {
-	gsSPGeometryMode(0, G_TEXTURE_GEN),
+	gsSPGeometryMode(G_CULL_BACK, G_TEXTURE_GEN),
 	gsSPLight(&kine_tf_Metal__METAL__lights.l, 1),
     gsSPLight(&kine_tf_Metal__METAL__lights.a, 2),
     gsSPCopyLightEXT(2, 15),
@@ -699,7 +699,7 @@ Gfx mat_kine_tf_Metal__METAL_[] = {
 };
 
 Gfx mat_revert_kine_tf_Metal__METAL_[] = {
-	gsSPGeometryMode(G_TEXTURE_GEN, 0),
+	gsSPGeometryMode(G_TEXTURE_GEN, G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
@@ -766,7 +766,7 @@ Gfx mat_revert_kine_tf_KineEyesDead[] = {
 };
 
 Gfx mat_kine_tf_Wing_Tip[] = {
-	gsSPGeometryMode(G_CULL_BACK, 0),
+	gsSPClearGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, TEXEL0, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, TEXEL0, TEXEL0, 0, ENVIRONMENT, 0),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -780,14 +780,14 @@ Gfx mat_kine_tf_Wing_Tip[] = {
 };
 
 Gfx mat_revert_kine_tf_Wing_Tip[] = {
-	gsSPGeometryMode(0, G_CULL_BACK),
+	gsSPSetGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_kine_tf_Wing_Base[] = {
-	gsSPGeometryMode(G_CULL_BACK, 0),
+	gsSPClearGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, TEXEL0, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, TEXEL0, TEXEL0, 0, ENVIRONMENT, 0),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -801,7 +801,7 @@ Gfx mat_kine_tf_Wing_Base[] = {
 };
 
 Gfx mat_revert_kine_tf_Wing_Base[] = {
-	gsSPGeometryMode(0, G_CULL_BACK),
+	gsSPSetGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),

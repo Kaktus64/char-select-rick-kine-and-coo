@@ -679,7 +679,7 @@ Gfx mat_revert_kine_tf_rock_Fast3D_Material_007[] = {
 };
 
 Gfx mat_kine_tf_rock_Metal__METAL_[] = {
-	gsSPGeometryMode(0, G_TEXTURE_GEN),
+	gsSPGeometryMode(G_CULL_BACK, G_TEXTURE_GEN),
 	gsSPLight(&kine_tf_rock_Metal__METAL__lights.l, 1),
     gsSPLight(&kine_tf_rock_Metal__METAL__lights.a, 2),
     gsSPCopyLightEXT(2, 15),
@@ -701,7 +701,7 @@ Gfx mat_kine_tf_rock_Metal__METAL_[] = {
 };
 
 Gfx mat_revert_kine_tf_rock_Metal__METAL_[] = {
-	gsSPGeometryMode(G_TEXTURE_GEN, 0),
+	gsSPGeometryMode(G_TEXTURE_GEN, G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),

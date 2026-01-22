@@ -381,104 +381,7 @@ Gfx coo_to_Head_DL_mesh_layer_1_tri_3[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0[69] = {
-	{{{207, -25, -128}, 0, {624, 240}, {0x7B, 0xE5, 0xED, 0xFF}}},
-	{{{-57, -10, -161}, 0, {624, -16}, {0xA9, 0xCF, 0xB1, 0xFF}}},
-	{{{4, 54, -148}, 0, {368, -16}, {0x0A, 0x6B, 0xBD, 0xFF}}},
-	{{{158, -7, -92}, 0, {112, 496}, {0x3E, 0x11, 0x6E, 0xFF}}},
-	{{{207, -25, -128}, 0, {368, 240}, {0x7B, 0xE5, 0xED, 0xFF}}},
-	{{{4, 54, -148}, 0, {112, 240}, {0x0A, 0x6B, 0xBD, 0xFF}}},
-	{{{207, -25, -128}, 0, {624, 496}, {0x7B, 0xE5, 0xED, 0xFF}}},
-	{{{-15, -26, -111}, 0, {880, 496}, {0xE1, 0x94, 0x3B, 0xFF}}},
-	{{{-57, -10, -161}, 0, {880, 240}, {0xA9, 0xCF, 0xB1, 0xFF}}},
-	{{{206, -25, -54}, 0, {624, 240}, {0x7A, 0xE5, 0x15, 0xFF}}},
-	{{{-14, -26, -63}, 0, {624, -16}, {0xE3, 0x8D, 0xD3, 0xFF}}},
-	{{{158, -7, -92}, 0, {368, -16}, {0x40, 0x0C, 0x93, 0xFF}}},
-	{{{1, 55, -39}, 0, {112, 496}, {0x08, 0x6F, 0x3D, 0xFF}}},
-	{{{206, -25, -54}, 0, {368, 240}, {0x7A, 0xE5, 0x15, 0xFF}}},
-	{{{158, -7, -92}, 0, {112, 240}, {0x40, 0x0C, 0x93, 0xFF}}},
-	{{{206, -25, -54}, 0, {624, 496}, {0x7A, 0xE5, 0x15, 0xFF}}},
-	{{{-61, -9, -18}, 0, {880, 496}, {0xA7, 0xD4, 0x50, 0xFF}}},
-	{{{-14, -26, -63}, 0, {880, 240}, {0xE3, 0x8D, 0xD3, 0xFF}}},
-	{{{158, -7, 92}, 0, {112, 496}, {0x3E, 0x11, 0x92, 0xFF}}},
-	{{{4, 54, 148}, 0, {112, 240}, {0x0A, 0x6B, 0x43, 0xFF}}},
-	{{{207, -25, 128}, 0, {368, 240}, {0x7B, 0xE5, 0x13, 0xFF}}},
-	{{{207, -25, 128}, 0, {624, 240}, {0x7B, 0xE5, 0x13, 0xFF}}},
-	{{{4, 54, 148}, 0, {368, -16}, {0x0A, 0x6B, 0x43, 0xFF}}},
-	{{{-57, -10, 161}, 0, {624, -16}, {0xA9, 0xCF, 0x4F, 0xFF}}},
-	{{{1, 55, 39}, 0, {112, 496}, {0x08, 0x6F, 0xC3, 0xFF}}},
-	{{{158, -7, 92}, 0, {112, 240}, {0x40, 0x0C, 0x6D, 0xFF}}},
-	{{{206, -25, 54}, 0, {368, 240}, {0x7A, 0xE5, 0xEB, 0xFF}}},
-	{{{206, -25, 54}, 0, {624, 240}, {0x7A, 0xE5, 0xEB, 0xFF}}},
-	{{{158, -7, 92}, 0, {368, -16}, {0x40, 0x0C, 0x6D, 0xFF}}},
-	{{{-14, -26, 63}, 0, {624, -16}, {0xE3, 0x8D, 0x2D, 0xFF}}},
-	{{{207, -25, 128}, 0, {624, 496}, {0x7B, 0xE5, 0x13, 0xFF}}},
-	{{{-57, -10, 161}, 0, {880, 240}, {0xA9, 0xCF, 0x4F, 0xFF}}},
-	{{{-15, -26, 111}, 0, {880, 496}, {0xE1, 0x94, 0xC5, 0xFF}}},
-	{{{206, -25, 54}, 0, {624, 496}, {0x7A, 0xE5, 0xEB, 0xFF}}},
-	{{{-14, -26, 63}, 0, {880, 240}, {0xE3, 0x8D, 0x2D, 0xFF}}},
-	{{{-61, -9, 18}, 0, {880, 496}, {0xA7, 0xD4, 0xB0, 0xFF}}},
-	{{{158, -7, -92}, 0, {368, 752}, {0x3E, 0x11, 0x6E, 0xFF}}},
-	{{{-15, -26, -111}, 0, {624, 752}, {0xE1, 0x94, 0x3B, 0xFF}}},
-	{{{207, -25, -128}, 0, {368, 496}, {0x7B, 0xE5, 0xED, 0xFF}}},
-	{{{-65, 49, -95}, 0, {496, 880}, {0xA5, 0x3E, 0x3E, 0xFF}}},
-	{{{4, 54, -148}, 0, {368, 1008}, {0x0A, 0x6B, 0xBD, 0xFF}}},
-	{{{-57, -10, -161}, 0, {624, 1008}, {0xA9, 0xCF, 0xB1, 0xFF}}},
-	{{{1, 55, -39}, 0, {368, 752}, {0x08, 0x6F, 0x3D, 0xFF}}},
-	{{{-61, -9, -18}, 0, {624, 752}, {0xA7, 0xD4, 0x50, 0xFF}}},
-	{{{206, -25, -54}, 0, {368, 496}, {0x7A, 0xE5, 0x15, 0xFF}}},
-	{{{-65, 49, -95}, 0, {496, 880}, {0xA8, 0x39, 0xB9, 0xFF}}},
-	{{{158, -7, -92}, 0, {368, 1008}, {0x40, 0x0C, 0x93, 0xFF}}},
-	{{{-14, -26, -63}, 0, {624, 1008}, {0xE3, 0x8D, 0xD3, 0xFF}}},
-	{{{39, 196, 0}, 0, {752, 307}, {0x7B, 0x21, 0x00, 0xFF}}},
-	{{{0, 185, -59}, 0, {710, 332}, {0x16, 0x4B, 0x9C, 0xFF}}},
-	{{{23, 255, 0}, 0, {752, 307}, {0x26, 0x79, 0x00, 0xFF}}},
-	{{{0, 185, 59}, 0, {710, 332}, {0x16, 0x4B, 0x64, 0xFF}}},
-	{{{-22, 216, 0}, 0, {752, 347}, {0xAC, 0x60, 0x00, 0xFF}}},
-	{{{23, 255, 0}, 0, {752, 347}, {0x26, 0x79, 0x00, 0xFF}}},
-	{{{158, -7, 92}, 0, {368, 752}, {0x3E, 0x11, 0x92, 0xFF}}},
-	{{{207, -25, 128}, 0, {368, 496}, {0x7B, 0xE5, 0x13, 0xFF}}},
-	{{{-15, -26, 111}, 0, {624, 752}, {0xE1, 0x94, 0xC5, 0xFF}}},
-	{{{-65, 49, 95}, 0, {496, 880}, {0xA5, 0x3E, 0xC2, 0xFF}}},
-	{{{-57, -10, 161}, 0, {624, 1008}, {0xA9, 0xCF, 0x4F, 0xFF}}},
-	{{{4, 54, 148}, 0, {368, 1008}, {0x0A, 0x6B, 0x43, 0xFF}}},
-	{{{1, 55, 39}, 0, {368, 752}, {0x08, 0x6F, 0xC3, 0xFF}}},
-	{{{206, -25, 54}, 0, {368, 496}, {0x7A, 0xE5, 0xEB, 0xFF}}},
-	{{{-61, -9, 18}, 0, {624, 752}, {0xA7, 0xD4, 0xB0, 0xFF}}},
-	{{{-65, 49, 95}, 0, {496, 880}, {0xA8, 0x39, 0x47, 0xFF}}},
-	{{{-14, -26, 63}, 0, {624, 1008}, {0xE3, 0x8D, 0x2D, 0xFF}}},
-	{{{-65, 49, 95}, 0, {496, 880}, {0xA8, 0x39, 0x47, 0xFF}}},
-	{{{-61, -9, 18}, 0, {624, 752}, {0xA7, 0xD4, 0xB0, 0xFF}}},
-	{{{158, -7, 92}, 0, {368, 1008}, {0x40, 0x0C, 0x6D, 0xFF}}},
-	{{{1, 55, 39}, 0, {368, 752}, {0x08, 0x6F, 0xC3, 0xFF}}},
-};
-
-Gfx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0[] = {
-	gsSPVertex(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 0, 64, 0),
-	gsSP2Triangles(0, 1, 2, 0, 3, 4, 5, 0),
-	gsSP2Triangles(6, 7, 8, 0, 9, 10, 11, 0),
-	gsSP2Triangles(12, 13, 14, 0, 15, 16, 17, 0),
-	gsSP2Triangles(18, 19, 20, 0, 21, 22, 23, 0),
-	gsSP2Triangles(24, 25, 26, 0, 27, 28, 29, 0),
-	gsSP2Triangles(30, 31, 32, 0, 33, 34, 35, 0),
-	gsSP2Triangles(36, 37, 38, 0, 37, 36, 39, 0),
-	gsSP2Triangles(36, 40, 39, 0, 40, 41, 39, 0),
-	gsSP2Triangles(41, 37, 39, 0, 42, 43, 44, 0),
-	gsSP2Triangles(43, 42, 45, 0, 42, 46, 45, 0),
-	gsSP2Triangles(46, 47, 45, 0, 47, 43, 45, 0),
-	gsSP2Triangles(48, 49, 50, 0, 48, 50, 51, 0),
-	gsSP2Triangles(49, 52, 53, 0, 51, 53, 52, 0),
-	gsSP2Triangles(54, 55, 56, 0, 56, 57, 54, 0),
-	gsSP2Triangles(58, 57, 56, 0, 59, 57, 58, 0),
-	gsSP2Triangles(54, 57, 59, 0, 60, 61, 62, 0),
-	gsSP1Triangle(62, 63, 60, 0),
-	gsSPVertex(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 64, 5, 0),
-	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
-	gsSP1Triangle(4, 1, 3, 0),
-	gsSPEndDisplayList(),
-};
-
-Vtx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_1[48] = {
+Vtx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0[48] = {
 	{{{193, 38, -131}, 0, {560, -16}, {0x2C, 0x0B, 0x8A, 0xFF}}},
 	{{{330, 31, -121}, 0, {624, -16}, {0x77, 0xD7, 0xF3, 0xFF}}},
 	{{{198, 115, -54}, 0, {688, -16}, {0x3C, 0x4F, 0xB1, 0xFF}}},
@@ -529,8 +432,8 @@ Vtx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_1[48] = {
 	{{{-47, 157, 166}, 0, {624, 368}, {0xCA, 0x52, 0x51, 0xFF}}},
 };
 
-Gfx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1[] = {
-	gsSPVertex(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_1 + 0, 48, 0),
+Gfx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0[] = {
+	gsSPVertex(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 0, 48, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 4, 5, 0),
 	gsSP2Triangles(2, 6, 7, 0, 4, 7, 6, 0),
 	gsSP2Triangles(8, 9, 10, 0, 10, 9, 11, 0),
@@ -561,7 +464,7 @@ Gfx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2[19] = {
+Vtx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_1[19] = {
 	{{{-47, 157, -166}, 0, {-33, 775}, {0xCA, 0x52, 0xAF, 0xFF}}},
 	{{{117, -9, -180}, 0, {-366, 101}, {0x24, 0x01, 0x86, 0xFF}}},
 	{{{-50, -4, -232}, 0, {-574, 622}, {0xC8, 0x01, 0x8E, 0xFF}}},
@@ -583,8 +486,8 @@ Vtx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2[19] = {
 	{{{193, 38, -131}, 0, {-79, -184}, {0x2C, 0x0B, 0x8A, 0xFF}}},
 };
 
-Gfx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2[] = {
-	gsSPVertex(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2 + 0, 19, 0),
+Gfx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1[] = {
+	gsSPVertex(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_1 + 0, 19, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(3, 0, 4, 0, 5, 3, 4, 0),
 	gsSP2Triangles(5, 4, 6, 0, 5, 6, 7, 0),
@@ -598,7 +501,7 @@ Gfx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_3[7] = {
+Vtx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2[7] = {
 	{{{-46, 224, 0}, 0, {752, 368}, {0xCB, 0x74, 0x00, 0xFF}}},
 	{{{-34, 220, 0}, 0, {752, 357}, {0x2B, 0x77, 0x00, 0xFF}}},
 	{{{-36, 216, -13}, 0, {743, 360}, {0x28, 0x70, 0xD3, 0xFF}}},
@@ -608,11 +511,27 @@ Vtx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_3[7] = {
 	{{{-47, 191, -85}, 0, {688, 368}, {0xC3, 0x68, 0xD7, 0xFF}}},
 };
 
-Gfx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3[] = {
-	gsSPVertex(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_3 + 0, 7, 0),
+Gfx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2[] = {
+	gsSPVertex(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2 + 0, 7, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(0, 6, 5, 0, 2, 6, 0, 0),
+	gsSPEndDisplayList(),
+};
+
+Vtx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_3[6] = {
+	{{{39, 196, 0}, 0, {752, 307}, {0x7B, 0x21, 0x00, 0xFF}}},
+	{{{0, 185, -59}, 0, {710, 332}, {0x16, 0x4B, 0x9C, 0xFF}}},
+	{{{23, 255, 0}, 0, {752, 307}, {0x26, 0x79, 0x00, 0xFF}}},
+	{{{0, 185, 59}, 0, {710, 332}, {0x16, 0x4B, 0x64, 0xFF}}},
+	{{{-22, 216, 0}, 0, {752, 347}, {0xAC, 0x60, 0x00, 0xFF}}},
+	{{{23, 255, 0}, 0, {752, 347}, {0x26, 0x79, 0x00, 0xFF}}},
+};
+
+Gfx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3[] = {
+	gsSPVertex(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_3 + 0, 6, 0),
+	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
+	gsSP2Triangles(1, 4, 5, 0, 3, 5, 4, 0),
 	gsSPEndDisplayList(),
 };
 
@@ -900,7 +819,7 @@ Gfx mat_revert_coo_to_Fast3D_Material_004[] = {
 };
 
 Gfx mat_coo_to_Metal__METAL_[] = {
-	gsSPGeometryMode(0, G_TEXTURE_GEN),
+	gsSPSetGeometryMode(G_TEXTURE_GEN),
 	gsSPLight(&coo_to_Metal__METAL__lights.l, 1),
     gsSPLight(&coo_to_Metal__METAL__lights.a, 2),
     gsSPCopyLightEXT(2, 15),
@@ -922,7 +841,7 @@ Gfx mat_coo_to_Metal__METAL_[] = {
 };
 
 Gfx mat_revert_coo_to_Metal__METAL_[] = {
-	gsSPGeometryMode(G_TEXTURE_GEN, 0),
+	gsSPClearGeometryMode(G_TEXTURE_GEN),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
@@ -1024,7 +943,7 @@ Gfx mat_revert_coo_to_CooEyesDead[] = {
 };
 
 Gfx mat_coo_to_Wing_Tip[] = {
-	gsSPGeometryMode(G_CULL_BACK, 0),
+	gsSPClearGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, TEXEL0, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, TEXEL0, TEXEL0, 0, ENVIRONMENT, 0),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -1038,14 +957,14 @@ Gfx mat_coo_to_Wing_Tip[] = {
 };
 
 Gfx mat_revert_coo_to_Wing_Tip[] = {
-	gsSPGeometryMode(0, G_CULL_BACK),
+	gsSPSetGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
 };
 
 Gfx mat_coo_to_Wing_Base[] = {
-	gsSPGeometryMode(G_CULL_BACK, 0),
+	gsSPClearGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, TEXEL0, TEXEL0, 0, ENVIRONMENT, 0, 0, 0, 0, TEXEL0, TEXEL0, 0, ENVIRONMENT, 0),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -1059,7 +978,7 @@ Gfx mat_coo_to_Wing_Base[] = {
 };
 
 Gfx mat_revert_coo_to_Wing_Base[] = {
-	gsSPGeometryMode(0, G_CULL_BACK),
+	gsSPSetGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
 	gsSPEndDisplayList(),
@@ -1189,18 +1108,18 @@ Gfx coo_to_Head_DL_mesh_layer_1_mat_override_CooEyesDead_4[] = {
 };
 
 Gfx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1[] = {
-	gsSPDisplayList(mat_coo_to_Fast3D_Material_008),
-	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_coo_to_Fast3D_Material_008),
 	gsSPDisplayList(mat_coo_to_Fast3D_Material_004),
-	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_coo_to_Fast3D_Material_004),
 	gsSPDisplayList(mat_coo_to_CooEyes),
-	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_coo_to_CooEyes),
 	gsSPDisplayList(mat_coo_to_Fast3D_Material_007),
-	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
 	gsSPDisplayList(mat_revert_coo_to_Fast3D_Material_007),
+	gsSPDisplayList(mat_coo_to_Fast3D_Material_008),
+	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_coo_to_Fast3D_Material_008),
 	gsSPEndDisplayList(),
 };
 
@@ -1215,66 +1134,66 @@ Gfx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Met
 };
 
 Gfx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_CooEyesHalf_1[] = {
-	gsSPDisplayList(mat_coo_to_Fast3D_Material_008),
-	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_coo_to_Fast3D_Material_008),
 	gsSPDisplayList(mat_coo_to_Fast3D_Material_004),
-	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_coo_to_Fast3D_Material_004),
 	gsSPDisplayList(mat_coo_to_CooEyesHalf),
-	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_coo_to_CooEyesHalf),
 	gsSPDisplayList(mat_coo_to_Fast3D_Material_007),
-	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
 	gsSPDisplayList(mat_revert_coo_to_Fast3D_Material_007),
+	gsSPDisplayList(mat_coo_to_Fast3D_Material_008),
+	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_coo_to_Fast3D_Material_008),
 	gsSPEndDisplayList(),
 };
 
 Gfx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_CooEyesClosed_2[] = {
-	gsSPDisplayList(mat_coo_to_Fast3D_Material_008),
-	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_coo_to_Fast3D_Material_008),
 	gsSPDisplayList(mat_coo_to_Fast3D_Material_004),
-	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_coo_to_Fast3D_Material_004),
 	gsSPDisplayList(mat_coo_to_CooEyesClosed),
-	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_coo_to_CooEyesClosed),
 	gsSPDisplayList(mat_coo_to_Fast3D_Material_007),
-	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
 	gsSPDisplayList(mat_revert_coo_to_Fast3D_Material_007),
+	gsSPDisplayList(mat_coo_to_Fast3D_Material_008),
+	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_coo_to_Fast3D_Material_008),
 	gsSPEndDisplayList(),
 };
 
 Gfx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_CooEyes_3[] = {
-	gsSPDisplayList(mat_coo_to_Fast3D_Material_008),
-	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_coo_to_Fast3D_Material_008),
 	gsSPDisplayList(mat_coo_to_Fast3D_Material_004),
-	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_coo_to_Fast3D_Material_004),
 	gsSPDisplayList(mat_coo_to_CooEyes),
-	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_coo_to_CooEyes),
 	gsSPDisplayList(mat_coo_to_Fast3D_Material_007),
-	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
 	gsSPDisplayList(mat_revert_coo_to_Fast3D_Material_007),
+	gsSPDisplayList(mat_coo_to_Fast3D_Material_008),
+	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_coo_to_Fast3D_Material_008),
 	gsSPEndDisplayList(),
 };
 
 Gfx coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_CooEyesDead_4[] = {
-	gsSPDisplayList(mat_coo_to_Fast3D_Material_008),
-	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_coo_to_Fast3D_Material_008),
 	gsSPDisplayList(mat_coo_to_Fast3D_Material_004),
-	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_coo_to_Fast3D_Material_004),
 	gsSPDisplayList(mat_coo_to_CooEyesDead),
-	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_coo_to_CooEyesDead),
 	gsSPDisplayList(mat_coo_to_Fast3D_Material_007),
-	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
 	gsSPDisplayList(mat_revert_coo_to_Fast3D_Material_007),
+	gsSPDisplayList(mat_coo_to_Fast3D_Material_008),
+	gsSPDisplayList(coo_to_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_coo_to_Fast3D_Material_008),
 	gsSPEndDisplayList(),
 };
 

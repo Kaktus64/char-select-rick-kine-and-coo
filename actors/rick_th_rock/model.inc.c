@@ -461,7 +461,7 @@ Gfx rick_th_rock_Butt_mesh_layer_1_tri_3[] = {
 
 
 Gfx mat_rick_th_rock_f3dlite_material_001[] = {
-	gsSPCopyLightsPlayerPart(SHIRT),
+	gsSPCopyLightsPlayerPart(CAP),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -486,7 +486,7 @@ Gfx mat_revert_rick_th_rock_f3dlite_material_001[] = {
 };
 
 Gfx mat_rick_th_rock_f3dlite_material[] = {
-	gsSPCopyLightsPlayerPart(PANTS),
+	gsSPCopyLightsPlayerPart(SKIN),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -506,7 +506,7 @@ Gfx mat_revert_rick_th_rock_f3dlite_material[] = {
 };
 
 Gfx mat_rick_th_rock_f3dlite_material_002[] = {
-	gsSPCopyLightsPlayerPart(SHIRT),
+	gsSPCopyLightsPlayerPart(CAP),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
