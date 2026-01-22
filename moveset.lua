@@ -403,7 +403,7 @@ function rick_th_update(m)
     --if m.action == ACT_WATER_IDLE then
         --set_mario_action(m, ACT_KINE_SWIM_IDLE, 0)
     --end
-
+    
 end
 
 function rick_th_set_action(m)
