@@ -1,5 +1,6 @@
--- name: [CS] Rick, Kine & Coo
--- description: ello mate
+-- name: [CS] \\#ffc400\\Rick, Kine & Coo
+-- description: [CS] \\#ffc400\\Rick, Kine & Coo\n\\#dbdbdb\\By \\#ac50ff\\Kaktus64\n\n\\#dbdbdb\\Friends by air, sea, and land!\n\n\\#dbdbdb\\The three animal friends from Kirby's Dream Land 2 are now a CS pack, all combined into one with a custom moveset! You'll swap to each animal friend depending on what you're doing.\n\n\\#ff7777\\This Pack requires Character Select\nto use as a Library!
+
 
 local TEXT_MOD_NAME = "[CS] Rick, Kine & Coo"
 
@@ -258,7 +259,7 @@ nil
 }
 
 if _G.charSelectExists then
-    CT_RICK_TH = _G.charSelect.character_add("Rick, Kine & Coo", {"Kirby's Dream Friends! Rick is a hamster-like creature who's quick on his feet,",
+    CT_RICK_TH = _G.charSelect.character_add("Rick, Kine & Coo", {"Kirby's Animal Friends! Rick is a hamster-like creature who's quick on his feet,",
     "and won't slip on ice. Kine is a creature who resembles a fish, and swims gracefully through water like... a fish. Coo is another creature who looks like an owl,",
     "and has great flying capabilities. Based on what you're doing, you'll switch between Rick, Kine & Coo automatically."}, "Kaktus64", {r = 255, g = 196, b = 0}, E_MODEL_RICK_TH, CT_MARIO, RICK_TH_ICON, 1)
 end
@@ -280,42 +281,42 @@ local function on_character_select_load()
     _G.charSelect.character_add_palette_preset(E_MODEL_RICK_TH, PALETTE_PICK_TH, "Significant Other")
     _G.charSelect.character_add_palette_preset(E_MODEL_RICK_TH, PALETTE_KIRBY_RTH, "Mouthful")
     _G.charSelect.character_add_palette_preset(E_MODEL_RICK_TH, PALETTE_RICK_DL2, "Dream")
-    _G.charSelect.character_add_palette_preset(E_MODEL_RICK_TH, PALETTE_RICK_N_P_C, "The Others")
+    _G.charSelect.character_add_palette_preset(E_MODEL_RICK_TH, PALETTE_RICK_N_P_C, "Forgotten")
 
     _G.charSelect.character_add_palette_preset(E_MODEL_RICK_TH_ROCK, PALETTE_RICK_TH, "Rick, Kine & Coo")
     _G.charSelect.character_add_palette_preset(E_MODEL_RICK_TH_ROCK, PALETTE_RICK_AIR_RIDERS, "Air Rider")
     _G.charSelect.character_add_palette_preset(E_MODEL_RICK_TH_ROCK, PALETTE_PICK_TH, "Significant Other")
     _G.charSelect.character_add_palette_preset(E_MODEL_RICK_TH_ROCK, PALETTE_KIRBY_RTH, "Mouthful")
     _G.charSelect.character_add_palette_preset(E_MODEL_RICK_TH_ROCK, PALETTE_RICK_DL2, "Dream")
-    _G.charSelect.character_add_palette_preset(E_MODEL_RICK_TH_ROCK, PALETTE_RICK_N_P_C, "The Others")
+    _G.charSelect.character_add_palette_preset(E_MODEL_RICK_TH_ROCK, PALETTE_RICK_N_P_C, "Forgotten")
 
     _G.charSelect.character_add_palette_preset(E_MODEL_COO_TO, PALETTE_COO_TO, "Rick, Kine & Coo")
     _G.charSelect.character_add_palette_preset(E_MODEL_COO_TO, PALETTE_COO_AIR_RIDERS, "Air Rider")
     _G.charSelect.character_add_palette_preset(E_MODEL_COO_TO, PALETTE_PICK_COO, "Significant Other")
     _G.charSelect.character_add_palette_preset(E_MODEL_COO_TO, PALETTE_KIRBY_CTH, "Mouthful")
     _G.charSelect.character_add_palette_preset(E_MODEL_COO_TO, PALETTE_COO_DL2, "Dream")
-    _G.charSelect.character_add_palette_preset(E_MODEL_COO_TO, PALETTE_COO_N_P_C, "The Others")
+    _G.charSelect.character_add_palette_preset(E_MODEL_COO_TO, PALETTE_COO_N_P_C, "Forgotten")
 
     _G.charSelect.character_add_palette_preset(E_MODEL_COO_TO_PARA, PALETTE_COO_TO, "Rick, Kine & Coo")
     _G.charSelect.character_add_palette_preset(E_MODEL_COO_TO_PARA, PALETTE_COO_AIR_RIDERS, "Air Rider")
     _G.charSelect.character_add_palette_preset(E_MODEL_COO_TO_PARA, PALETTE_PICK_COO, "Significant Other")
     _G.charSelect.character_add_palette_preset(E_MODEL_COO_TO_PARA, PALETTE_KIRBY_CTH, "Mouthful")
     _G.charSelect.character_add_palette_preset(E_MODEL_COO_TO_PARA, PALETTE_COO_DL2, "Dream")
-    _G.charSelect.character_add_palette_preset(E_MODEL_COO_TO_PARA, PALETTE_COO_N_P_C, "The Others")
+    _G.charSelect.character_add_palette_preset(E_MODEL_COO_TO_PARA, PALETTE_COO_N_P_C, "Forgotten")
 
     _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF, PALETTE_KINE_TF, "Rick, Kine & Coo")
     _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF, PALETTE_KINE_AIR_RIDERS, "Air Rider")
     _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF, PALETTE_PICK_KINE, "Significant Other")
     _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF, PALETTE_KIRBY_KTF, "Mouthful")
     _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF, PALETTE_KINE_DL2, "Dream")
-    _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF, PALETTE_KINE_N_P_C, "The Others")
+    _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF, PALETTE_KINE_N_P_C, "Forgotten")
 
     _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF_ROCK, PALETTE_KINE_TF, "Rick, Kine & Coo")
     _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF_ROCK, PALETTE_KINE_AIR_RIDERS, "Air Rider")
     _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF_ROCK, PALETTE_PICK_KINE, "Significant Other")
     _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF_ROCK, PALETTE_KIRBY_KTF, "Mouthful")
     _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF_ROCK, PALETTE_KINE_DL2, "Dream")
-    _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF_ROCK, PALETTE_KINE_N_P_C, "The Others")
+    _G.charSelect.character_add_palette_preset(E_MODEL_KINE_TF_ROCK, PALETTE_KINE_N_P_C, "Forgotten")
 
 
     CSloaded = true
